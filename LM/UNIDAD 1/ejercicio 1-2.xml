@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+        <alumno>
+            <nombre>Sem</nombre>
+            <apellido>Pelegrina</apellido>
+            <edad>19</edad>
+            <email>pelegrinalopezsem001.alu@stemgranada.com</email>
+        </alumno>
+        <alumno>
+            <nombre>Juan</nombre>
+            <apellido>Perez</apellido>
+            <edad>64</edad>
+            <email>perezjuan001.alu@stemgranada.com</email>
+        </alumno>
+</alumnos>

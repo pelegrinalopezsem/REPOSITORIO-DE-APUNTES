@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetas>
+    <receta>
+        <nombre>Tortilla de Papas</nombre>
+        <ingredientes>
+            <ingrediente>
+                <nombre>Papas</nombre>
+                <cantidad>4</cantidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>huevos</nombre>
+                <cantidad>6</cantidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>Aceite</nombre>
+                <cantidad>500ml</cantidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>Sal</nombre>
+                <cantidad>3g</cantidad>
+            </ingrediente>
+        </ingredientes>
+        <tiempopreparacion>5-7 min</tiempopreparacion>
+    </receta>
+    <receta>
+        <nombre>Espaguetis con Nata</nombre>
+        <ingredientes>
+            <ingrediente>
+                <nombre>espaguetis</nombre>
+                <cantidad>200g</cantidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>Nata para cocinar</nombre>
+                <cantidad>150ml</cantidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>dientes de ajo</nombre>
+                <cantidad>2</cantidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>queso</nombre>
+                <cantidad>200g </cantidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>agua</nombre>
+                <cantidad>100ml </cantidad>
+            </ingrediente>
+            <ingrediente>
+                <nombre>sal</nombre>
+                <cantidad>3g</cantidad>
+            </ingrediente>
+        </ingredientes>
+        <tiempopreparacion>10-15min</tiempopreparacion>
+    </receta>
+
+</recetas>

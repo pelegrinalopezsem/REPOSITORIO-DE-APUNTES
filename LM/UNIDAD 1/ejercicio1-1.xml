@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libros>
+    <libro>
+            <titulo>Harry Potter</titulo>
+            <autor>J.K. Rowling </autor>
+            <Anio>1990</Anio>
+            <editorial>Salamandra</editorial>
+    </libro>
+    
+    <libro>
+            <titulo>Percy Jackson</titulo>
+            <autor>Rick Riordan</autor>
+            <Anio>1964</Anio>
+            <editorial>Salamandra Infantil y Juvenil</editorial>
+    </libro>
+
+    <libro>
+            <titulo>El corredor de laberintos</titulo>
+            <autor>James Dashner</autor>
+            <Anio>1972</Anio>
+            <editorial>	Delacorte Press</editorial>
+    </libro>
+</libros>
