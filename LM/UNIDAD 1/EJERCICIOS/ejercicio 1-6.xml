@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instituto>
+    <clase>
+        <alumno>
+            <nombre>Juan Carlos</nombre>
+            <edad>19 años</edad>
+            <notaMedia>10</notaMedia>
+        </alumno>
+        <alumno>
+            <nombre>Pepe</nombre>
+            <edad>20 años</edad>
+            <notaMedia>3</notaMedia>
+        </alumno>
+    </clase>
+    <clase>
+        <alumno>
+            <nombre>Rosa</nombre>
+            <edad>44 años</edad>
+            <notaMedia>8</notaMedia>
+        </alumno>
+        <alumno>
+            <nombre>Lucia</nombre>
+            <edad>89 años</edad>
+            <notaMedia>9</notaMedia>
+        </alumno>
+    </clase>
+    <clase>
+        <alumno>
+            <nombre>Juan</nombre>
+            <edad>22 años</edad>
+            <notaMedia>4</notaMedia>
+        </alumno>
+        <alumno>
+            <nombre>Luis</nombre>
+            <edad>72 años</edad>
+            <notaMedia>5</notaMedia>
+        </alumno>
+    </clase>
+</instituto>
