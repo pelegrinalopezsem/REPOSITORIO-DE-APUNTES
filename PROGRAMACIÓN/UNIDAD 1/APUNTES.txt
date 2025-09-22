@@ -1,0 +1,3 @@
+El parseFloat hace que un texto se convierta en numero
+
+let numero1 = parseFloat (texto1)
