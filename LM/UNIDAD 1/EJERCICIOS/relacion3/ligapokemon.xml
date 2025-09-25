@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE liga SYSTEM "liga.dtd">
+<liga>
+    <entrenador>
+        <nombre>Sem</nombre>
+        <pokemon>
+            <nombre>squirtle</nombre>
+            <tipo>Agua</tipo>
+            <nivel>77</nivel>
+        </pokemon>
+        <pokemon>
+            <nombre>charmander</nombre>
+            <tipo>Fuego</tipo>
+            <nivel>88</nivel>
+        </pokemon>
+    </entrenador>
+    <entrenador>
+        <nombre>Paco</nombre>
+        <pokemon>
+            <nombre>burbasu</nombre>
+            <tipo>Planta</tipo>
+            <nivel>88</nivel>
+        </pokemon>
+    </entrenador>
+
+
+</liga>
