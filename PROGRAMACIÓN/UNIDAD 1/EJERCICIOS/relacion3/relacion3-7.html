@@ -1,0 +1,26 @@
+<script>
+    // ### 7. **Simular una calculadora simple**:
+    //   - Pide dos números y una operación (`+`, `-`, `*`, `/`) e imprime el resultado correspondiente.
+
+    //Definimos las variables
+    let numero1 = Number(prompt("Introduce un numero: "))
+    let numero2 = Number(prompt("Introduce un numero: "))
+    let operacion = prompt("Introduce una operacion (`+`, `-`, `*`, `/`) ")
+    let suma = operacion == "+"
+    let resta = operacion == "-"
+    let division = operacion == "/"
+    let multiplicacion = operacion == "*"
+
+    //Realizamos una condicion
+    if (suma) {
+        console.log("El resultado es " + parseInt(numero1 + numero2))
+    } else if (resta) {
+        console.log("El resultado es " + parseInt(numero1 - numero2))
+    } else if (multiplicacion) {
+        console.log("El resultado es " + numero1 * numero2)
+    } else if (division) {
+        console.log ("El resultado es " + numero1 / numero2)
+    } else {
+        console.log("Operacion no valida")
+    }
+</script>
