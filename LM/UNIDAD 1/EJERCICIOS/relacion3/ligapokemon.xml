@@ -11,6 +11,7 @@
         <pokemon>
             <nombre>charmander</nombre>
             <tipo>Fuego</tipo>
+            <tipo>Volador</tipo>
             <nivel>88</nivel>
         </pokemon>
     </entrenador>

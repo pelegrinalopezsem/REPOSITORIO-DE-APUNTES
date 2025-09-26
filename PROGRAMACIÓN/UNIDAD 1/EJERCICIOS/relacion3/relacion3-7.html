@@ -10,17 +10,24 @@
     let resta = operacion == "-"
     let division = operacion == "/"
     let multiplicacion = operacion == "*"
-
+    
     //Realizamos una condicion
     if (suma) {
-        console.log("El resultado es " + parseInt(numero1 + numero2))
+            let operacionsuma = parseInt(numero1 + numero2)
+        console.log("El resultado es " + operacionsuma)
     } else if (resta) {
-        console.log("El resultado es " + parseInt(numero1 - numero2))
+            let operacionresta = parseInt(numero1 - numero2)
+        console.log("El resultado es " + operacionresta)
     } else if (multiplicacion) {
-        console.log("El resultado es " + numero1 * numero2)
+            let operacionmultiplicaion = numero1 * numero2
+        console.log("El resultado es " + operacionmultiplicaion)
+    } else if (division && cero) {
+            let operaciondivision =  numero1 / numero2
+            let cero = (numero2 == "0")
+        console.log("Nah")
     } else if (division) {
-        console.log ("El resultado es " + numero1 / numero2)
+        console.log ("El resultado es " + operaciondivision)
     } else {
-        console.log("Operacion no valida")
+        console.log ("Operacion no valida")
     }
 </script>
