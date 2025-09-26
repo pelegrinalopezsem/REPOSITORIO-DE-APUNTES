@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calendario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="relacion4-3.xsd">
+    <evento id="1012">
+        <titulo>Mundial de futbol</titulo>
+        <fecha>2025-12-11</fecha>
+        <hora>13:00:00</hora>
+        <ubicacion>Maracena</ubicacion>
+        <codigoPostal>18200</codigoPostal>
+    </evento>
+</calendario>
