@@ -6,5 +6,13 @@
 
 //Definimos las variables
 let numero = Number(prompt("Introduce un numero con dos cifras"))
-let 
-</script>
+
+//Separamos los numeros
+let primeracifra = numero.charAt(0)
+let segundacifra = numero.charAt(1)
+let suma = parseInt(primeracifra + segundacifra)
+
+//Creamos una condicion
+if (numero >= 10 && numero <= 99) {
+    console.log ("La suma es " + numero)
+}
