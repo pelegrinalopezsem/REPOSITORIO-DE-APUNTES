@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="relacion4-2.xsd">
-    <pedidos>
+<pedidos> xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="relacion4-2.xsd">
+
   <pedido codigo="A101">
     <cliente>
       <nombre>Ana García</nombre>
@@ -10,16 +10,7 @@
     <productos>
       <producto>
         <nombre>Ratón inalámbrico</nombre>
-        <producto>
-      <producto>
-        <nombre>Teclado mecánico</nombre>
-        <precio>79.99</precio>
-        <cantidad>1</cantidad>
-      </producto>
-    </productos>
-    <estado>Enviado</estado>
-  </pedido>
-</pedidos>precio>19.95</precio>
+        <precio>19.95</precio>
         <cantidad>2</cantidad>
       </producto>
       <producto>

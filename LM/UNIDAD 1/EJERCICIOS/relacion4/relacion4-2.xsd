@@ -19,7 +19,7 @@
                                     <xs:element name="email">
                                         <xs:simpleType>
                                         <xs:restriction base="xs:string">
-                                            <xs:pattern value="[a-zA-Z0-9._%+-]+@gmail\.com"/>
+                                            <xs:pattern value="[a-zA-Z0-9._%+-]+@example\.com"/>
                                         </xs:restriction>
                                         </xs:simpleType>
                                     </xs:element>
@@ -36,7 +36,9 @@
                         <xs:element name="productos">
                             <xs:complexType>
                                 <xs:sequence>
-                        <xs:element name="producto">
+                        <xs:element name="producto" maxOccurs="unbounded" minOccurs="1">
+                            <xs:complexType>
+                                <xs:sequence>
                                     <xs:element name="nombre">
                                         <xs:simpleType>
                                         <xs:restriction base="xs:string">
@@ -47,6 +49,7 @@
                                     <xs:element name="precio">
                                         <xs:simpleType>
                                         <xs:restriction base="xs:decimal">
+                                            <xs:minInclusive value="0"/>
                                         </xs:restriction>
                                         </xs:simpleType>
                                     </xs:element>
@@ -58,8 +61,11 @@
                                         </xs:restriction>
                                         </xs:simpleType>
                                     </xs:element>
-                                </xs:sequence>
+                                    </xs:sequence>
                             </xs:complexType>
+                        </xs:element>
+                          </xs:sequence>
+                          </xs:complexType>
                         </xs:element>
                         <xs:element name="estado">
                             <xs:simpleType>
@@ -78,5 +84,6 @@
         </xs:sequence>
     </xs:complexType>
 </xs:element>
+
 
 </xs:schema>
