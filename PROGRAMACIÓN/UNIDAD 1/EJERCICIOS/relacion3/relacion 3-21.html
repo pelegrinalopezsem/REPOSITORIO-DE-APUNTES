@@ -1,0 +1,33 @@
+<script>
+// ### 21. **Sistema de clasificación de IMC**:
+//   - Pide el peso y la altura del usuario para calcular el IMC, luego clasifica en:
+//     - Bajo peso (IMC < 18.5).
+//     - Normal (IMC entre 18.5 y 24.9).
+//     - Sobrepeso (IMC entre 25 y 29.9).
+//     - Obesidad (IMC >= 30).
+
+//Solicita el peso y la altura del usuario
+let peso = Number(prompt("Introduce tu peso"))
+let altura = Number(prompt("Introduce tu altura en m"))
+
+//Definimos variables
+let imc = peso / altura**2
+let bajopeso = imc < 18.5
+let pesonormal = imc > 18.5 && imc < 24.9
+let Sobrepeso = imc > 25 && imc < 29.9
+let Obesidad = imc >= 30
+console.log ("Tienes un imc de " + imc)
+
+//Definimos la condiciion
+if (bajopeso) {
+    console.log ("Tienes un peso bajo")
+} else if (pesonormal) {
+    console.log ("Tienes un peso normal")
+} else if (Sobrepeso) {
+    console.log ("Tienes sobrepeso")
+} else if (Obesidad) {
+    console.log("Tienes un problema de obesidad")
+} else {
+    console.log("Introduce bien los datos")
+}
+</script>
