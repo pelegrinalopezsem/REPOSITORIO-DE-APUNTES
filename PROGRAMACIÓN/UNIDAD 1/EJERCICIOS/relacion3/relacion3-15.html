@@ -1,0 +1,32 @@
+<script>
+// ### 15. **Determinar el tipo de ángulo**:
+//   - Solicita el valor de un ángulo y determina si es:
+//     - Ángulo agudo (< 90°).
+//     - Ángulo recto (= 90°).
+//     - Ángulo obtuso (> 90° pero < 180°).
+//     - Ángulo llano (= 180°).
+
+
+//Pedimos al usuario el angulo
+let angulo = Number(prompt("Introduce el valor del angulo: "))
+
+//Definimos las variables
+let agudo = angulo < 90
+let recto = angulo == 90
+let obtuso = angulo > 90 && angulo < 180
+let llano = angulo == 180
+
+//definimos una condicion
+if (agudo) {
+    console.log ("Tu angulo es agudo")
+} else if (recto) {
+    console.log ("Tu angulo es recto ")
+} else if (obtuso) {
+    console.log ("Tu angulo es obtuso")
+} else if (llano) {
+    console.log ("Tu angulo es llano")
+} else {
+    console.log ("El angulo no es correcto")
+}
+
+</script>

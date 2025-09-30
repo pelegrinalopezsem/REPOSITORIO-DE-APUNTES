@@ -7,25 +7,18 @@
 //     - "Caliente" si es mayor a 25°C.
 
 //Pedimos una temperatura al usuario
-let temperatura = prompt("Introduce una temperatura")
-
-//Definimos las variables
-let Caliente = (temperatura > 25)
-let templado = (temperatura >= 16 && temperatura <= 25)
-let Frio = (temperatura >= 1 && temperatura <= 15)
-let muyfrio = (temperatura < 0)
-
-
-
+    let temperatura = prompt("Introduce una temperatura")
 
 //Creamos la condicion
-if (muyfrio) {
+if (temperatura < 0) {
     console.log("Hace mucho frio estamos a " + temperatura + "ºC")
-} else if (frio) {
+} else if (temperatura <= 15) {
     console.log ("Hace frio estamos a " + temperatura + "ºC")
-} else if (templado) {
+} else if (temperatura <= 25) {
     console.log ("Esta el clima templado estamos a " + temperatura + "ºC")
-} else if (Caliente) {
+} else if (temperatura > 25) {
     console.log("Estoy ardiendo estamos a " + temperatura + "ºC")
+} else {
+    console.log ("Introduce un valor correcto")
 }
 </script>

@@ -1,0 +1,32 @@
+<script>
+// ### 19. **Cálculo de coste de estacionamiento**:
+//   - Pide al usuario el tiempo que estuvo estacionado (en horas) y calcula el coste:
+//     - Primeras 2 horas: 5€ cada hora.
+//     - De 2 a 5 horas: 4€ cada hora.
+//     - Más de 5 horas: 3€ cada hora adicional.
+
+//Le pedimos al usuario el tiempo que estuvo estacionado
+let tiempoestancionado = Number(prompt("Introduce el tiempo que estuviste estacionado"))
+
+//Definimos variables
+let doshorasestacionado = tiempoestancionado <= 2
+let treaacuatrohoras = tiempoestancionado > 2 && tiempoestancionado < 5
+let masde5horas = tiempoestancionado > 5
+let costedoshoras = 5 * tiempoestancionado
+let coste2a5horas = (tiempoestancionado - 2) * 4
+
+
+//Definimos la condicion
+if (doshorasestacionado) {
+    console.log ("El costo es de " + costedoshoras + "€")
+} else if (treaacuatrohoras) {
+    let costetotal = coste2a5horas + costedoshoras
+        console.log("El costo es de " + costetotal + "€")
+} else if (masde5horas) {
+    let costemasde5 = (tiempoestancionado - 5) * 3
+    let costetotal2 = coste2a5horas + costedoshoras + costemasde5
+        console.log ("El coste es de " + costetotal2 + "€") 
+} else  {
+    console.log ("Introduce bien los valores")
+}
+</script>
