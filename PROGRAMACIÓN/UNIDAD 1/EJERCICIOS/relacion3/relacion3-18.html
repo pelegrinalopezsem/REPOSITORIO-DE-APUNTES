@@ -6,22 +6,22 @@
 //     - Si tiene un promedio menor a 8, no recibe beca.
 
 //Solicitamos el promedio academico y su igreso familiar
-let promedioacademico = Number(prompt("Introduce tu promedio Academico"))
-let ingresofamiliar = Number(prompt("Introduce tu ingreso familiar"))
+    let promedioacademico = Number(prompt("Introduce tu promedio Academico"))
+    let ingresofamiliar = Number(prompt("Introduce tu ingreso familiar"))
 
 //Definimos las variables
-let becacompleta = promedioacademico >= 8 && ingresofamiliar < 20000
-let becaparcial = promedioacademico >= 8 && ingresofamiliar > 20000
-let nohaybeca = promedioacademico < 8
+    let becacompleta = promedioacademico >= 8 && ingresofamiliar < 20000
+    let becaparcial = promedioacademico >= 8 && ingresofamiliar > 20000
+    let nohaybeca = promedioacademico < 8
 
 //Hacemos la condicion
-if (nohaybeca) {
-    console.log ("No recibes beca")
-} else if (becaparcial) {
-    console.log ("Recibes la beca parcial")
-} else if (becacompleta) {
-    console.log ("Recibes la beca completa")
-} else {
-    console.log ("Introduce bien los datos")
-}
+    if (nohaybeca) {
+        console.log("No recibes beca")
+    } else if (becaparcial) {
+        console.log("Recibes la beca parcial")
+    } else if (becacompleta) {
+        console.log("Recibes la beca completa")
+    } else {
+        console.log("Introduce bien los datos")
+    }
 </script>

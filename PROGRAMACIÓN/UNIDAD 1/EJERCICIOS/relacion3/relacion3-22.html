@@ -7,14 +7,10 @@ let usuario1 = prompt("Elige entre piedra, papel o tijera")
 let usuario2 = prompt("Elige entre piedra, papel o tijera")
 
 //Definimos las variables
-let piedragana = usuario1 == "piedra" && usuario2 == "tijera" 
-let piedraempata = usuario1 == "piedra" && usuario2 == "piedra"
-let piedrapierde = usuario1 == "piedra" && usuario2 == "papel"
-let papelgana = usuario1 == "papel" && usuario2 == "piedra"
-let papelempata = usuario1 == "papel" && usuario2 == "papel"
-let papelpierde = usuario2 == "papel" && usuario2 == "tijera"
-let tijeragana = usuario1 == "tijera" && usuario2 == "papel"
-let tijerapierde = usuario1 =="tijera" && usuario2 == "piedra"
-let tijeraempate = usuario1 == "tijera" && usuario2 == "tijera"
+if (usuario1.toLowerCase == usuario2.toLowerCase) {
+    console.log ("Ha sido un empate")
+} else if (usuario1.toLowerCase == "piedra" && usuario2.toLowerCase == "tijera" || usuario1.toLowerCase == "papel" && usuario2.toLowerCase == "piedra" || usuario1.toLowerCase == "tijera" && usuario2.toLowerCase == papel) {
+    console.log ("Usuario1 gana")
+} else ("Usuario2 gana")
 
 </script>
