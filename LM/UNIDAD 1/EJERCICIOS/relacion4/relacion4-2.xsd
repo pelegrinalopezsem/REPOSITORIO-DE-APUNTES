@@ -64,8 +64,8 @@
                                     </xs:sequence>
                             </xs:complexType>
                         </xs:element>
-                          </xs:sequence>
-                          </xs:complexType>
+                                </xs:sequence>
+                            </xs:complexType>
                         </xs:element>
                         <xs:element name="estado">
                             <xs:simpleType>
