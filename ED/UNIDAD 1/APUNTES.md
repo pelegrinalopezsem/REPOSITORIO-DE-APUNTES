@@ -150,6 +150,11 @@ GitHub es una plataforma en la nube y un servicio de alojamiento de código que 
 Una vez que tienes un repositorio local y un repositorio remoto creado en GitHub, necesitas **enlazarlos** para poder sincronizar los cambios entre ambos.
 
 Para conectar un repositorio local con un repositorio remoto en GitHub, utiliza el comando `git remote add`. Este comando vincula el repositorio local con el remoto, lo que te permitirá subir y descargar cambios fácilmente.
+Cambia a otra rama o crea una nueva si se usa con -b (por ejemplo, git checkout -b nueva-rama).
+```bash
+git checkout [rama]
+```
+
 
 **Comando para enlazar el repositorio local**
 
