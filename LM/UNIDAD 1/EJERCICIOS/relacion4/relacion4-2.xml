@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pedidos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="relacion4-2.xsd">
 
-  <pedido codigo="1021">
+  <pedido codigo="A101">
     <cliente>
       <nombre>Ana García</nombre>
       <email>ana@example.com</email>
