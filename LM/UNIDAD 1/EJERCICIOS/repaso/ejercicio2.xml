@@ -1,0 +1,12 @@
+<!DOCTYPE alumno [
+<!ELEMENT alumno (nombre, apellido, edad?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+]>
+
+<alumno>
+    <nombre>Sem</nombre>
+    <apellido>Pelegrina</apellido>
+    <edad>18</edad>
+</alumno>

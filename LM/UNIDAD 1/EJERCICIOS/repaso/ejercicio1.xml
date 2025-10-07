@@ -1,0 +1,12 @@
+<!DOCTYPE libro [
+<!ELEMENT libro (titulo, autor, editorial)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT editorial (#PCDATA)>
+]>
+
+<libro>
+    <titulo>Mago de OZ</titulo>
+    <autor>L. Frank Baum</autor>
+    <editorial>Penguin Clásicos</editorial>
+</libro>

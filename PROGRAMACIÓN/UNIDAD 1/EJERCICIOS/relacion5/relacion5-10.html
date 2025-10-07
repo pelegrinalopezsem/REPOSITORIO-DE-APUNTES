@@ -1,0 +1,17 @@
+<script>
+    let primernumero = prompt("Introduce un numero entero")
+    let segundonumero = prompt("Introduce un numero entero")
+
+    primernumero = Number(primernumero)
+    segundonumero = Number(segundonumero)
+    mayorque = primernumero <= segundonumero
+    if (mayorque) {
+
+        for (let i = (primernumero); i >= segundonumero; i++) {
+            console.log(i)
+        }
+    } else {
+
+        console.log("El primer numero tiene que ser mas chico que el segundo")
+    }
+</script>
