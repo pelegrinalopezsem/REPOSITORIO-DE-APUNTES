@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tienda SYSTEM "tienda.dtd">
+<tienda>
+    <nombre>TiendaPokemon</nombre>
+    <pokemon>
+        <nombre>Pikachu</nombre>
+        <tipo>Electrico</tipo>
+        <precio>55€</precio>
+    </pokemon>
+
+</tienda>

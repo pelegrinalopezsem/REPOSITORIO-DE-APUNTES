@@ -1,0 +1,24 @@
+<!DOCTYPE biblioteca [
+<!ELEMENT biblioteca (seccion+)>
+<!ELEMENT seccion (nombre,libro+)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT libro (titulo,autor,anio?)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT anio (#PCDATA)>
+]>
+
+<biblioteca>
+    <seccion>
+        <nombre>Fantasia</nombre>
+        <libro>
+            <titulo>Harry Potter</titulo>
+            <autor>J. K. Rowling</autor>
+            <anio>1991</anio>
+        </libro>
+        <libro>
+            <titulo>Señor de los anillos</titulo>
+            <autor>John Ronald Reuel Tolkien</autor>
+        </libro>
+    </seccion>
+</biblioteca>

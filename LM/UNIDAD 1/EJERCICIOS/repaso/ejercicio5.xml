@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agencia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio5.xsd">
+
+<paquete codigo="PKT-5555">
+    <Destino>Maracena</Destino>
+    <precio>88</precio>
+    <fechaInicio>2025-09-10</fechaInicio>
+    <fechafin>2025-09-23</fechafin>
+    <tipo>Relax</tipo>
+</paquete>
+<cliente>
+    <nombre>Sem</nombre>
+    <dni>77022821F</dni>
+    <edad>19</edad>
+    <email>pelegrinalopezsem001.alu@stemgranada.com</email>
+</cliente>
+</agencia>
