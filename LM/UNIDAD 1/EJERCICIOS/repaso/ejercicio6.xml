@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio6.xsd">
+    <producto id="126">
+        <nombre>Placa Base MSI</nombre>
+        <categoria>Ordenador</categoria>
+        <precio>9.98</precio>
+        <stock>999</stock>
+    </producto>
+    <proveedor>
+        <nombre>Pccomponentes</nombre>
+        <telefono>666-666-666</telefono>
+        <pais>Murcia</pais>
+    </proveedor>
+</inventario>
