@@ -1,19 +1,20 @@
 <script>
     let tamanio = Number(prompt("Introduce el tamaño de la piramide:"))
-    let piramide = ""
+    let fila = ""
     let asteriscos = ""
     let espacios = ""
     let numEspacios = 0
-    for(let i = tamanio; i > 0; i--){
-        asteriscos+="*"
-        espacios = "" //Reseteo los espacios antes de añadirlos
-        numEspacios = tamanio - (i - 1)
-
-        for(let j = numEspacios; j > 0; j--){
-            espacios+=" "
+    const ASTERISCOS = "*"
+    const ESPACIOS = " "
+    for(let i = 0; i < tamanio; i++){
+        espacios = ESPACIOS.repeat(i)
+        asteriscos+= ASTERISCOS.repeat(tamanio - i)
+        
+        fila = espacios + asteriscos
+        console.log(fila);
+            
+            
         }
 
-        piramide = espacios + asteriscos
-        console.log(piramide);
-    }
+    
 </script>

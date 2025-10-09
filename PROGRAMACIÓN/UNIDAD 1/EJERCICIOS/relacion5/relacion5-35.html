@@ -1,0 +1,20 @@
+<script>
+    let numero = Number(prompt("Introduce un numero entero"))
+    let modulo = 2
+    let igual = numero
+    let siguiente = 0
+
+    while ((numero % modulo) != 0) {
+        modulo++
+    }
+    while (siguiente % numero == 0) {
+        siguiente++
+    }
+
+    if (numero == modulo) {
+        console.log("El numero " + numero + " es primo")
+    } else {
+        console.log("El numero " + numero + " NO es primo")
+        console.log("El siguiente numero primo es " + numero)
+    }
+</script>
