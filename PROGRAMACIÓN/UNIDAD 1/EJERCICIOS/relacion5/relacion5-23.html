@@ -4,17 +4,17 @@
     let asteriscos = ""
     let espacios = ""
     let numEspacios = 0
-    for(let i = tamanio; i > 0; i++){
-        espacios = " " //Reseteo los espacios antes de añadirlos
-        numEspacios = tamanio - (i - 1)
+    const ASTERISCOS = "*"
+    const ESPACIOS = " "
+    for(let i = 0; i < tamanio; i++){
+        espacios = ESPACIOS.repeat(i)
+        asteriscos+= ASTERISCOS.repeat(tamanio - i)
         
-        asteriscos = ""
-        for(let j = numEspacios; j > 0; j--){
-            asteriscos+="*"
+        fila = espacios + asteriscos
+        console.log(fila);
+            
             
         }
 
-        fila = espacios + asteriscos
-        console.log(fila);
-    }
+    
 </script>
