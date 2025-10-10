@@ -1,0 +1,17 @@
+<script>
+let numero = (prompt("Introduce un numero con dos cifras"))
+
+//Separamos los numeros
+let primeracifra = Number(numero.charAt(0))
+let segundacifra = Number(numero.charAt(1))
+
+//Creamos una condicion
+if (numero >= 10 && numero <= 99) {
+        let suma = (primeracifra + segundacifra)
+    console.log ("La suma es " + suma)
+}
+
+//Mostramos en consola los dos digitos
+console.log ("La primera cifra es " + primeracifra)
+console.log ("La segunda cifra es " + segundacifra)
+</script>

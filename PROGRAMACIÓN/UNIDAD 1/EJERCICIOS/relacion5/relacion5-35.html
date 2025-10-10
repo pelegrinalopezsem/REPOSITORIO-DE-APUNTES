@@ -2,19 +2,19 @@
     let numero = Number(prompt("Introduce un numero entero"))
     let modulo = 2
     let igual = numero
-    let siguiente = 0
-
-    while ((numero % modulo) != 0) {
-        modulo++
-    }
-    while (siguiente % numero == 0) {
-        siguiente++
-    }
-
-    if (numero == modulo) {
-        console.log("El numero " + numero + " es primo")
-    } else {
-        console.log("El numero " + numero + " NO es primo")
-        console.log("El siguiente numero primo es " + numero)
+    let esprimo = false
+    while (!esprimo) {
+        modulo
+        while ((numero % modulo) != 0) {
+            modulo++
+        }
+        if (numero == modulo) {
+            console.log("El numero " + numero + " es primo")
+            esprimo = true
+        } else {
+            console.log("El numero " + numero + " NO es primo")
+            numero++
+            
+        }
     }
 </script>
