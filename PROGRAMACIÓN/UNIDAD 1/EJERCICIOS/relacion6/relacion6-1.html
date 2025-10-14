@@ -1,9 +1,28 @@
 <script>
-let nota = Number(prompt("Introduce la nota del examen"))
-let alumno = 0
-while (nota != -1){
-    alumno++
-    console.log("Introduce la calificacion del alumno " + alumno + ":" + nota )
-    nota=Number(prompt("Introduce la nota del examen"))
-}
+    let nota = Number(prompt("Introduce la nota del examen"))
+    let alumno = 0
+    let sumatorio = 0
+    let alumnosAprobados = 0
+    let alumnosSuspensos = 0
+    let promedio = sumatorio / (alumno - 1)
+
+    while (nota != -1) {
+
+        while (nota < 0 || nota > 10) {
+           nota = Number(prompt("Valor incorrecto.Introduce la nota del examen"))
+        }
+            sumatorio += nota
+            alumno++
+            if (nota >= 5 || nota <= 10){
+                alumnosAprobados++
+            } else {
+                alumnosSuspensos++
+            }
+
+            console.log("Introduce la calificacion del alumno " + alumno + ":" + nota)
+            nota = Number(prompt("Introduce la nota del examen"))
+    }
+
+    console.log("Hay " + alumnosAprobados + " alumnos aprovados y hay " + alumnosSuspensos + " alumnos suspensos")
+    console.log("La calificacion media es: " + promedio)
 </script>
