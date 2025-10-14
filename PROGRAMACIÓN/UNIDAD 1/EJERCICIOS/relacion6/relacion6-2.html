@@ -10,11 +10,19 @@
     let retirar = Number(prompt("Saldo: " + saldo + " | Introduzca el saldo a retirar: "  ))
     
     let cuenta = saldo - retirar
+    let saldoRestante = cuenta
 
     
     
-    while (saldo != 0){
-        retirar = Number(prompt("Saldo: " + cuenta + " | Introduzca el saldo a retirar: " ))
+    while (saldoRestante != 0){
+        retirar = Number(prompt("Saldo: " + saldoRestante + " | Introduzca el saldo a retirar: " ))
+        saldoRestante = saldoRestante - retirar
+        if (saldoRestante < 0) {
+            console.log("Saldo insuficiente.")
+            saldoRestante = (saldoRestante + retirar)
+        } else if (saldoRestante == 0) {
+            console.log("Te has quedado sin saldo ¡A trabajar!")
+        }
     }
 
 </script>
