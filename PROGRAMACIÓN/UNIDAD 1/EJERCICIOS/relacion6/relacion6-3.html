@@ -1,22 +1,22 @@
 <script>
     let producto = 1
-    let propina = Number(prompt("Introduce el precio del producto " + producto  + ":"))
-    console.log("Precio del producto " + producto + ": " + propina )
+    let propina = Number(prompt("Introduce el precio del producto " + producto + ":"))
+    console.log("Precio del producto " + producto + ": " + propina)
     let propinaTotal = 0
-    
-    while(propina != 0){
+
+    while (propina != 0) {
         producto++
         propinaTotal = propinaTotal + propina
-        propina = Number(prompt("Introduce el precio del producto " + producto  + ":"))
-        console.log("Precio del producto " + producto + ": " + propina )
-    } 
+        propina = Number(prompt("Introduce el precio del producto " + producto + ":"))
+        console.log("Precio del producto " + producto + ": " + propina)
+    }
     let porcentajePropina = Number(prompt("Introduce el porcenatje de propina que quieres dejar"))
-    console.log("¿Cuanta propina quieres dejar?: " + porcentajePropina)
+        console.log("¿Cuanta propina quieres dejar?: " + porcentajePropina)
     let personas = prompt("Introduce el numero de personas")
-    console.log("¿Cuantas personas sois?: " + personas)
-    console.log("Total sin propinas: " + propinaTotal + "€")
-    let calcularPropina = parseInt(((propinaTotal * porcentajePropina)/ 100)+ propinaTotal)
-    console.log("Total con propina del " + porcentajePropina + "%: " + calcularPropina + "€")
+        console.log("¿Cuantas personas sois?: " + personas)
+        console.log("Total sin propinas: " + propinaTotal + "€")
+    let calcularPropina = parseInt(((propinaTotal * porcentajePropina) / 100) + propinaTotal)
+        console.log("Total con propina del " + porcentajePropina + "%: " + calcularPropina + "€")
     let PrecioPersona = parseInt(calcularPropina / personas)
-    console.log("Precio por cabeza: " + PrecioPersona + "€") 
+        console.log("Precio por cabeza: " + PrecioPersona + "€") 
 </script>

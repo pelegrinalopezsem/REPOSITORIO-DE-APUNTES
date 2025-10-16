@@ -1,0 +1,42 @@
+<script>
+    let primerNumero = Number(prompt("Introduce el primer numero:"))
+    let segundoNumero = Number(prompt("Introduce el segundo numero:"))
+    let operacion = prompt("Introduce la operacion")
+    let suma = 0
+    let resta = 0
+    let multiplicacion = 0
+    let division = 0
+    while (primerNumero != "SALIR"){
+        if (operacion == "+"){
+            suma = primerNumero + segundoNumero
+                console.log("EL resultado de " + primerNumero + " + " + segundoNumero + " es " + suma)
+            primerNumero = Number(prompt("Introduce el primer numero:"))
+            segundoNumero = Number(prompt("Introduce el segundo numero:"))
+            operacion = prompt("Introduce la operacion")
+        } else if (operacion == "-"){
+            resta = primerNumero - segundoNumero
+                console.log("EL resultado de " + primerNumero + " - " + segundoNumero + " es " + resta)
+            primerNumero = Number(prompt("Introduce el primer numero:"))
+            segundoNumero = Number(prompt("Introduce el segundo numero:"))
+            operacion = prompt("Introduce la operacion")
+        } else if (operacion == "/") {
+            division = parseInt(primerNumero / segundoNumero)
+                console.log("EL resultado de " + primerNumero + " / " + segundoNumero + " es " + division)
+            primerNumero = Number(prompt("Introduce el primer numero:"))
+            segundoNumero = Number(prompt("Introduce el segundo numero:"))
+            operacion = prompt("Introduce la operacion")
+        } else if (operacion == "*") {
+            multiplicacion = primerNumero * segundoNumero
+                console.log("EL resultado de " + primerNumero + " * " + segundoNumero + " es " + multiplicacion)
+            primerNumero = Number(prompt("Introduce el primer numero:"))
+            segundoNumero = Number(prompt("Introduce el segundo numero:"))
+            operacion = prompt("Introduce la operacion")
+        } else {
+                console.log("Introduce los datos correctos")
+            primerNumero = Number(prompt("Introduce el primer numero:"))
+            segundoNumero = Number(prompt("Introduce el segundo numero:"))
+            operacion = prompt("Introduce la operacion")
+        }
+
+    }
+</script>

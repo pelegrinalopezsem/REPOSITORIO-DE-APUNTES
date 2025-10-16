@@ -1,0 +1,17 @@
+<script>
+    let numeroDia = 1
+    let temperatura = Number(prompt("Introduce la temperatura del dia " + numeroDia +": "))
+    let totalTemperatura = 0
+    let temperaturaMedia = 0
+    while (numeroDia != 8) {
+        if (temperatura >= -20 && temperatura <= 50 ){
+        totalTemperatura = totalTemperatura + temperatura
+        numeroDia++
+        temperatura = Number(prompt("Introduce la temperatura del dia " + numeroDia +": "))
+        } else {
+            console.log("Temperatura incorrecta. Debe estar entre -20 y 50")
+            temperatura = Number(prompt("Introduce la temperatura del dia " + numeroDia +": "))
+        }
+    } temperaturaMedia = totalTemperatura / 7
+    console.log("La temperatura media de la semana es: " + temperaturaMedia)
+</script>
