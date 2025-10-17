@@ -1,0 +1,20 @@
+<script>
+    let numeroCoche = 1
+    let nombreCoche = prompt("Introduce el nombre del coche " + numeroCoche + ":")
+    let tiempoBoxes = Number(prompt("Introduce el tiempo en boxer:"))
+    let tiempoTotal = 0 + tiempoBoxes
+    let tiempoMedio = 0 
+    while (nombreCoche != "FIN"){
+        numeroCoche++
+        nombreCoche = prompt("Introduce el nombre del coche " + numeroCoche + ":")
+        if (nombreCoche != "FIN"){
+        tiempoBoxes = Number(prompt("Introduce el tiempo en boxer:"))
+        tiempoTotal = tiempoTotal + tiempoBoxes
+        } else {
+            numeroCoche --
+        }
+    }
+    tiempoMedio = tiempoTotal / numeroCoche
+    console.log("Total de coches: " + numeroCoche--)
+    console.log("Tiempo medio: " + tiempoMedio + " segundos")
+</script>

@@ -1,6 +1,43 @@
 <script>
     let numero = Number(prompt("Introduce el numero:"))
     let digito = Number(prompt("introduce el digito:"))
+    let cifrasRestantes
+    let resto
+    let apariciones
 
-    wh
+
+    while (numero != "SALIR" && digito != "SALIR"){
+        numero = Number(prompt("Introduce el numero:"))
+        if (numero != "SALIR") {
+        if (numero >= 0) {
+            digito = -1
+            while (digito != "SALIR" &&(digito <0 || digito > 9)) {
+                digito = prompt("Introduce un digito:")
+
+                if (digito != "SALIR") {
+                    digito = Number(digito)
+                    if (digito < 0 || digito > 9 ) {
+                        alert("¡Digito incorrecto!")
+                    }
+                }
+            }
+        if (digito != "SALIR") {
+            apariciones = 0
+            cifrasRestantes = numero
+
+            while (cifrasRestantes != 0) {
+                resto = cifrasRestantes % 10
+                cifrasRestantes = parseInt(cifrasRestantes/10)
+
+            if (resto == digito) {
+                apariciones++
+            }
+            }
+        }
+        alert("El dígito " + digito + " aparece " + apariciones + " veces en el número " + numero)
+        }
+        } else {
+            alert("¡Numero incorrecto!")
+        }
+    }
 </script>

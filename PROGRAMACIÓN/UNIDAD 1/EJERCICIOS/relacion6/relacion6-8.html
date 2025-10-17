@@ -1,0 +1,46 @@
+<script>
+    let nombreHobbit1 = prompt("Introduce el nombre del Hobbit")
+    let edadHobbit1 = Number(prompt("Introduce la edad de " + nombreHobbit1))
+    let nombreHobbit2 = prompt("Introduce el nombre del Hobbit")
+    let edadHobbit2 = Number(prompt("Introduce la edad de " + nombreHobbit2))
+    let nombreHobbit3 = prompt("Introduce el nombre del Hobbit")
+    let edadHobbit3 = Number(prompt("Introduce la edad de " + nombreHobbit3))
+    let puedeComer1, puedeComer2, puedeComer3 
+    let sumaEdades = edadHobbit1 + edadHobbit2 + edadHobbit3
+    const EDADLIMITE = 33
+
+    if (nombreHobbit1 < EDADLIMITE || sumaEdades % 2 == 0 ) {
+        puedeComer1 = true
+    }
+    if (nombreHobbit2 < EDADLIMITE || sumaEdades % 3 == 0) {
+        puedeComer2 = true
+    }
+    if (nombreHobbit3 < EDADLIMITE || sumaEdades % 5 == 0) {
+        puedeComer3 = true
+    }
+
+
+    if (puedeComer1 == true) {
+        console.log("El Hobbit " + nombreHobbit1 + " de " + edadHobbit1 + " años puede repetir")
+    } else {
+        console.log("El Hobbit " + nombreHobbit1 + " de " + edadHobbit1 + " años NO puede repetir")
+    }
+    if (puedeComer2 == true) {
+        console.log("El Hobbit " + nombreHobbit2 + " de " + edadHobbit2 + " años puede repetir")
+    } else {
+        console.log("El Hobbit " + nombreHobbit2 + " de " + edadHobbit2 + " años NO puede repetir")
+    }
+    if (puedeComer3 == true) {
+        console.log("El Hobbit " + nombreHobbit3 + " de " + edadHobbit3 + " años puede repetir")
+    } else {
+        console.log("El Hobbit " + nombreHobbit3 + " de " + edadHobbit3 + " años NO puede repetir")
+    }
+
+    if(puedeComer1 && puedeComer2 && puedeComer3){
+        console.log("Toca repartir la comida")
+    }else if(!puedeComer1 && !puedeComer2 && !puedeComer3){
+        console.log("Va a sobrar comida")
+    }else{
+        console.log("¡A comer!")
+    }
+</script>
