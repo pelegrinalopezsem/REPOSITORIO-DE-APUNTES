@@ -1,0 +1,22 @@
+<script>
+    let numeroRepostaje = 1;
+    let sumarepostaje = 0;
+    const capacidadDeposito = 60;
+    const precioLitro = 1.25;
+
+    while (sumarepostaje < capacidadDeposito) {
+        let repostaje = Number(prompt("Repostaje " + numeroRepostaje + " (litros):"));
+        sumarepostaje += repostaje;
+        numeroRepostaje++;
+
+        if (sumarepostaje >= capacidadDeposito) {
+            console.log("¡Depósito lleno!");
+        }
+    }
+
+    let totalRepostaje = numeroRepostaje - 1;
+    console.log("Total de repostajes: " + totalRepostaje);
+
+    let totalGastado = capacidadDeposito * precioLitro;
+    console.log("Total gastado: " + totalGastado.toFixed(2) + "€");
+</script>

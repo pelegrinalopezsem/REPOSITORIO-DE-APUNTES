@@ -1,0 +1,12 @@
+<script>
+    let numeroVueltas = 5
+    let tiempo = ""
+    let sumaTiempo = ""
+    for (let i = 1; i <= numeroVueltas; i++){
+    tiempo = Number(prompt("Tiempo vuelta " + i + " :"))
+    sumaTiempo =+ tiempo
+    } 
+    console.log("Tiempo total: " + sumaTiempo)
+    let tiempoMedio = sumaTiempo / numeroVueltas
+    console.log("Tiempo medio: " + tiempoMedio)
+</script>
