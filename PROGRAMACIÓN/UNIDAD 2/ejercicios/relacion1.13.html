@@ -1,12 +1,23 @@
 <script>
     let letras = ["a", "b", "c", "d"]
-    let eliminado = letras.pop()
-    let eliminadoA = letras.shift()
-    let eliminadoSegundo = letras.pop()
-    let eliminadoTercero = letras.pop()
-    letras.unshift(eliminadoTercero)
-    letras.unshift(eliminadoSegundo)
-    letras.push(eliminadoA)
-    letras.unshift(eliminado)
-    console.log(letras)
+//FORMA SIN BUCLES
+// let eliminado = letras.pop()
+// let eliminadoA = letras.shift()
+// let eliminadoSegundo = letras.pop()
+// let eliminadoTercero = letras.pop()
+// letras.unshift(eliminadoTercero)
+// letras.unshift(eliminadoSegundo)
+// letras.push(eliminadoA)
+// letras.unshift(eliminado)
+// console.log(letras)
+
+//CON BUCLES
+    let tamañoLetras = letras.length
+    let letras2 = []
+    for (let i = 0; i < tamañoLetras; i++) {
+        let eliminar = letras.pop()
+        letras2.push(eliminar)
+    }
+    console.log(letras2);
+    
 </script>
