@@ -1,0 +1,12 @@
+<script>
+    let letras = ["a", "b", "c", "d"]
+    let eliminado = letras.pop()
+    let eliminadoA = letras.shift()
+    let eliminadoSegundo = letras.pop()
+    let eliminadoTercero = letras.pop()
+    letras.unshift(eliminadoTercero)
+    letras.unshift(eliminadoSegundo)
+    letras.push(eliminadoA)
+    letras.unshift(eliminado)
+    console.log(letras)
+</script>
