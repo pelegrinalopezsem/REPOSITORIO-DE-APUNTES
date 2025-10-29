@@ -2,33 +2,53 @@
     let jugadores = []
     let puntuaciones = []
     const MAXJUGADORES = 5
-    let numeroJUgador = 0
-    let jugador = prompt("Introduce el nombre del jugador")
-    let puntuacion = Number(prompt("Introduce la puntuacion de " + jugador[numeroJUgador]))
+    let jugador
+    let puntuacion
+
+    // Primer jugador
+    jugador = prompt("Introduce el nombre del jugador")
+    puntuacion = Number(prompt("Introduce la puntuación de " + jugador))
     console.log(jugador + " : " + puntuacion)
+
     jugadores.push(jugador)
     puntuaciones.push(puntuacion)
-    let opciones = Number(prompt("1.Añadir un nuevo jugador y su puntuación \N 2.Mostrar los jugadores y sus puntuaciones actuales \N Salir del programa"))
-    while (opciones == 3){
-    if (opciones == 1) {
-        while (jugador != "SALIR") {
-            numeroJUgador++
-            jugador = prompt("Introduce el nombre del jugador")
-            puntuacion = Number(prompt("Introduce la puntuacion de " + jugador[numeroJUgador]))
-            let sumajugadores = jugadores.length
-            if (jugador != "SALIR") {
+
+    let opcion = 0
+
+    while (opcion !== 3) {
+        opcion = Number(prompt(
+            "Elige una opción:\n" +
+            "1. Añadir un nuevo jugador y su puntuación\n" +
+            "2. Mostrar los jugadores y sus puntuaciones actuales\n" +
+            "3. Salir del programa"
+        ))
+
+        if (opcion === 1) {
+            jugador = prompt("Introduce el nombre del jugador (o escribe SALIR para cancelar)")
+                puntuacion = Number(prompt("Introduce la puntuación de " + jugador))
                 jugadores.push(jugador)
                 puntuaciones.push(puntuacion)
+
+                // Mantener máximo de 5 jugadores
+                if (jugadores.length > MAXJUGADORES) {
+                    jugadores.shift()
+                    puntuaciones.shift()
+                
+
+                jugador = prompt("Introduce el nombre del jugador (o escribe SALIR para cancelar)")
             }
-            if (sumajugadores == 5) {
-                jugadores.shift()
-                puntuaciones.shift()
+        } 
+        else if (opcion === 2) {
+            console.log("=== Jugadores y puntuaciones ===")
+            for (let i = 0; i < jugadores.length; i++) {
+                console.log(jugadores[i] + " : " + puntuaciones[i])
             }
+        } 
+        else if (opcion === 3) {
+            console.log("Saliendo del programa...")
+        } 
+        else {
+            alert("Opción no válida. Intenta de nuevo.")
         }
     }
-    else (opciones == 2) {
-        console.log(jugadores)
-        console.log(puntuacioes)
-    }
-}
 </script>

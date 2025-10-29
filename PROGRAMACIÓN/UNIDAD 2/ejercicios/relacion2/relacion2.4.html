@@ -1,0 +1,18 @@
+<script>
+    let titulosLibros = []
+    let cantidadLibros = []
+    let opciones = ""
+    let libro = ""
+    let cantidad = 0
+    while (opciones != "4"){
+    opciones = Number(prompt("1. Elige una de estas opciones: \N Añadir un nuevo libro al inventario (con su título y cantidad). \N 2 . Actualizar la cantidad de un libro existente. \N 3. Ver el inventario completo (título y cantidad de cada libro). \N 4. Salir del programa. "))
+    if (opciones != 4){
+        if (opciones == 1){
+            libro = prompt("Introduce el titulo del libro")
+            cantidad = Number(prompt("Introduce la cantidad de libros"))
+            titulosLibros.push(libro)
+            cantidadLibros.push(cantidad)
+        }
+    }
+    }
+</script>
