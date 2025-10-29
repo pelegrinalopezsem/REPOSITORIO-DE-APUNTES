@@ -1,1 +1,2 @@
-
+Si epoch Time pasa de tener 32 bits asginados a 64 bits,
+ en vez de hasta 2038,¿Hasta qué fecha va a  poder almacenar con 64bits?
