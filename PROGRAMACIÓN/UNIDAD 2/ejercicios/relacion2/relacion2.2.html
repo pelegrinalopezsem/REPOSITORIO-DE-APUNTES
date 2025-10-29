@@ -3,25 +3,28 @@
     let puntuaciones = []
     const MAXJUGADORES = 5
     let numeroJUgador = 0
-    let jugador =  prompt("Introduce el nombre del jugador")
+    let jugador = prompt("Introduce el nombre del jugador")
     let puntuacion = Number(prompt("Introduce la puntuacion de " + jugador[numeroJUgador]))
-    console.log(jugador +" : " + puntuacion)
-        jugadores.push(jugador)
-        puntuaciones.push(puntuacion)
-    while (jugador != "SALIR" ){
+    console.log(jugador + " : " + puntuacion)
+    jugadores.push(jugador)
+    puntuaciones.push(puntuacion)
+
+    while (jugador != "SALIR") {
         numeroJUgador++
         jugador = prompt("Introduce el nombre del jugador")
         puntuacion = Number(prompt("Introduce la puntuacion de " + jugador[numeroJUgador]))
         let sumajugadores = jugadores.length
-        jugadores.push(jugador)
-        puntuaciones.push(puntuacion)
-    if (sumajugadores == 6){
-        jugadores.shift()
-        puntuaciones.shift()
-    }
-    console.log(jugador +" : " + puntuacion)
-    console.log(jugadores)
-    console.log(puntuacion)
+        if (jugador != "SALIR") {
+            jugadores.push(jugador)
+            puntuaciones.push(puntuacion)
+        }
+        if (sumajugadores == 5) {
+            jugadores.shift()
+            puntuaciones.shift()
+        }
     }
     
+console.log(jugador + " : " + puntuacion)
+console.log(jugadores)
+console.log(puntuacioes)
 </script>
