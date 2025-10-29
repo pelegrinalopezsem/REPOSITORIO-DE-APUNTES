@@ -1,28 +1,52 @@
 <script>
-    let dias = ["Lunes", "Martes", "MIercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+    let dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+    let temperaturas = []
     let numero = 0
-    let temperatura = prompt("Introduce la temperatura del " + dias[numero])
+    let temperatura = 0
     const DIASSEMANAS = 7
-    let temperaturaMasBaja = 0
+    let temperaturaMasBaja = 100
     let temperaturaMasAlta = 0
     let diaMasCaluroso = ""
     let diaMasFrio = ""
     let promedioTemp = 0
-    for (let i = 1; i <= DIASSEMANAS; i++) {
-        numero ++
-        temperatura = prompt("Introduce la temperatura del " + dias[numero])
+    let promedioSemana = 0
+    for (let i = 0; i < DIASSEMANAS; i++) {
+        temperatura = Number(prompt("Introduce la temperatura del " + dias[numero]))
         promedioTemp += temperatura
-    if (temperatura > temperaturaMasAlta)
-        diaMasCaluroso = dias[numero]
-        temperaturaMasAlta = temperatura
-    } 
-    if (temperatura < temperaturaMasBaja) {
-        diaMasFrio = dias[numero]
-        temperaturaMasBaja = temperatura
+        if (i == 0) {
+            temperaturaMasAlta = temperatura
+            temperaturaMasBaja = temperatura
+        }
+        if (temperatura > temperaturaMasAlta) {
+            diaMasCaluroso = dias[numero]
+            temperaturaMasAlta = temperatura
+        }
+        if (temperatura < temperaturaMasBaja) {
+            diaMasFrio = dias[numero]
+            temperaturaMasBaja = temperatura
+        }
+
+        numero++
+
     }
-    console.log("La temperatura mas alta registrada es: "+ temperaturaMasAlta + "el dia: " + diaMasCaluroso);
-    console.log("La temperatura mas baja registrada es: " + temperaturaMasBaja + "el dia: " + diaMasFrio);
-    let promedioSemana = promedioTemp / DIASSEMANAS
-    console.log("La temperatura promedio de la semana es: " + promedioSemana)
-    
+    console.log("1. Mostrar la temperatura más alta registrada")
+    console.log("2. la temperatura más baja registrada.")
+    console.log("3. la temperatura promedio de la semana.")
+    console.log("4. Salir del programa")
+    let opcion = Number(prompt("Introduce una "))
+
+    while (opcion != 4) {
+        if (opcion == 1) {
+            console.log("La temperatura mas alta registrada es: " + temperaturaMasAlta + " el dia: " + diaMasCaluroso);
+        } else if (opcion == 2) {
+            console.log("La temperatura mas baja registrada es: " + temperaturaMasBaja + " el dia: " + diaMasFrio);
+        } else if (opcion == 3) {
+            promedioSemana = (promedioTemp / DIASSEMANAS).toFixed(2)
+            console.log("La temperatura promedio de la semana es: " + promedioSemana)
+        } else {
+            opcion = Number(prompt("Introduce un munero del 1 al 4"))
+        }
+        opcion = Number(prompt("Introduce una "))
+    }
+
 </script>
