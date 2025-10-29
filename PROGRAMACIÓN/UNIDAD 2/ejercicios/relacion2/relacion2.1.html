@@ -12,6 +12,7 @@
     let promedioSemana = 0
     for (let i = 0; i < DIASSEMANAS; i++) {
         temperatura = Number(prompt("Introduce la temperatura del " + dias[numero]))
+        temperaturas.push(temperatura)
         promedioTemp += temperatura
         if (i == 0) {
             temperaturaMasAlta = temperatura
@@ -25,9 +26,7 @@
             diaMasFrio = dias[numero]
             temperaturaMasBaja = temperatura
         }
-
         numero++
-
     }
     console.log("1. Mostrar la temperatura más alta registrada")
     console.log("2. la temperatura más baja registrada.")
