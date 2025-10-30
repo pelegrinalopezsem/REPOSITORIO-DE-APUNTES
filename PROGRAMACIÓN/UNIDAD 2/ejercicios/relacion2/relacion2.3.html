@@ -1,48 +1,35 @@
 <script>
-    let productos = ["placa","procesador","ssd","ram","disipacion","pastatermica","tarjetagrafica","alimentacion","cajadepc","tarjetadeaudio"]
-    let precios = [200,500,70,100,60,20,400,120,50,200]
+    let productos = ["placa", "procesador", "ssd", "ram", "disipacion", "pastatermica", "tarjetagrafica", "alimentacion", "cajadepc", "tarjetadeaudio"]
+    let precios = [200, 500, 70, 100, 60, 20, 400, 120, 50, 200]
     let productosAdquiridos = []
     let preciosProductos = []
     let precioproducto = 0
+    let productoadquirido = ""
     let compra = ""
     let cantidad = 0
     let precioTotal = 0
     let cantidadTotal = 0
-    while(compra != "FIN"){
-    compra = prompt("De esta lista de productos que quieres comprar " + productos)
-    if (compra != "FIN"){
-    cantidad = Number(prompt("Introduce la cantidad que quieres de " + compra))
-    if (compra == "placa"){
-        precioproducto = precios[0]
-    } else if (compra == "procesador"){
-        precioproducto = precios[1]
-    } else if(compra == "ssd"){
-        precioproducto = precios[2]
-    }else if(compra == "ram"){
-        precioproducto = precios[3]
-    }else if (compra == "disipacion"){
-        precioproducto = precios[4]
-    }else if (compra == "pastatermica"){
-        precioproducto = precios[5]
-    }else if (compra == "tarjetagrafica"){
-        precioproducto = precios[6]
-    }else if (compra == "alimentacion"){
-        precioproducto = precios[7]
-    }else if (compra == "cajadepc"){
-        precioproducto = precios[8]
-    }else if (compra == "tarjetadeaudio"){
-        precioproducto = precios[9]
-    }else {
-        alert ("Introduce bien los productos")
-    }
-    cantidadPrecio = precioproducto * cantidad
-    cantidadTotal = cantidadPrecio
-    precioTotal += cantidadPrecio
-    productosAdquiridos.push(compra)
-    preciosProductos.push(cantidadTotal)
-}
-}
-console.log ("Has comprado estos productos: " + productosAdquiridos)
-console.log ("Con estos precios: " + precioproducto)
-console.log ("Con un coste total de: " + precioTotal)
-    </script>
+    let index = ""
+
+
+    while (compra != "FIN") {
+        compra = prompt("De esta lista de productos que quieres comprar " + productos)
+        if (compra != "FIN") {
+                index = 0
+                while (productos[index] != compra) {
+                    index++
+                }
+                cantidad = Number(prompt("Introduce la cantidad"))
+                precioproducto = precios[index]
+                productoadquirido = productos[index]
+                cantidadPrecio = precioproducto * cantidad
+                cantidadTotal = cantidadPrecio
+                precioTotal += cantidadPrecio
+                productosAdquiridos.push(compra)
+                preciosProductos.push(cantidadTotal)
+            }
+        }
+    console.log("Has comprado estos productos: " + productosAdquiridos)
+    console.log("Con estos precios: " + precioproducto)
+    console.log("Con un coste total de: " + precioTotal)
+</script>

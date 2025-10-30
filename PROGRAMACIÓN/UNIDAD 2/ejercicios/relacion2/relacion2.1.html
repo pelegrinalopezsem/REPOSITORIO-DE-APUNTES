@@ -12,6 +12,9 @@
     let promedioSemana = 0
     for (let i = 0; i < DIASSEMANAS; i++) {
         temperatura = Number(prompt("Introduce la temperatura del " + dias[numero]))
+        while(temperatura < -270 || temperatura > 100){
+            temperatura = Number(prompt("Introduce la temperatura del " + dias[numero]))
+        }
         temperaturas.push(temperatura)
         promedioTemp += temperatura
         if (i == 0) {

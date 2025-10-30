@@ -1,18 +1,9 @@
 <script>
-    let jugadores = []
-    let puntuaciones = []
+    let jugadores = ["Jugador1", "Jugador2", "Jugador3", "Jugador4", "Jugador5"]
+    let puntuaciones = [120, 200, 150, 180, 220]
     const MAXJUGADORES = 5
     let jugador
     let puntuacion
-
-    // Primer jugador
-    jugador = prompt("Introduce el nombre del jugador")
-    puntuacion = Number(prompt("Introduce la puntuación de " + jugador))
-    console.log(jugador + " : " + puntuacion)
-
-    jugadores.push(jugador)
-    puntuaciones.push(puntuacion)
-
     let opcion = 0
 
     while (opcion !== 3) {
@@ -25,28 +16,28 @@
 
         if (opcion === 1) {
             jugador = prompt("Introduce el nombre del jugador (o escribe SALIR para cancelar)")
-                puntuacion = Number(prompt("Introduce la puntuación de " + jugador))
-                jugadores.push(jugador)
-                puntuaciones.push(puntuacion)
+            puntuacion = Number(prompt("Introduce la puntuación de " + jugador))
+            jugadores.push(jugador)
+            puntuaciones.push(puntuacion)
 
-                // Mantener máximo de 5 jugadores
-                if (jugadores.length > MAXJUGADORES) {
-                    jugadores.shift()
-                    puntuaciones.shift()
-                
+            // Mantener máximo de 5 jugadores
+            if (jugadores.length > MAXJUGADORES) {
+                jugadores.shift()
+                puntuaciones.shift()
+
 
                 jugador = prompt("Introduce el nombre del jugador (o escribe SALIR para cancelar)")
             }
-        } 
+        }
         else if (opcion === 2) {
             console.log("=== Jugadores y puntuaciones ===")
             for (let i = 0; i < jugadores.length; i++) {
                 console.log(jugadores[i] + " : " + puntuaciones[i])
             }
-        } 
+        }
         else if (opcion === 3) {
             console.log("Saliendo del programa...")
-        } 
+        }
         else {
             alert("Opción no válida. Intenta de nuevo.")
         }
