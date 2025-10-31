@@ -13,23 +13,28 @@
 
 
     while (compra != "FIN") {
-        compra = prompt("De esta lista de productos que quieres comprar " + productos)
+        compra = prompt("De esta lista de productos que quieres comprar " + productos).toLowerCase
         if (compra != "FIN") {
-                index = 0
-                while (productos[index] != compra) {
-                    index++
+            for (let i = 0; i < productos.length; i++) {
+                if (compra == productos[i]) {
+                    cantidad = Number(prompt("Introduce la cantidad"))
+                    while (cantidad < 0){
+                        alert("Introduce una cantidad valida")
+                    }
+                    precioproducto = precios[i]
+                    productoadquirido = productos[i]
+                    cantidadPrecio = precioproducto * cantidad
+                    cantidadTotal = cantidadPrecio
+                    precioTotal += cantidadPrecio
+                    productosAdquiridos.push(compra)
+                    preciosProductos.push(cantidadTotal)
+                }else{
+                    alert("Escribe algo de la lista de compra")
                 }
-                cantidad = Number(prompt("Introduce la cantidad"))
-                precioproducto = precios[index]
-                productoadquirido = productos[index]
-                cantidadPrecio = precioproducto * cantidad
-                cantidadTotal = cantidadPrecio
-                precioTotal += cantidadPrecio
-                productosAdquiridos.push(compra)
-                preciosProductos.push(cantidadTotal)
             }
         }
+    }
     console.log("Has comprado estos productos: " + productosAdquiridos)
-    console.log("Con estos precios: " + precioproducto)
+    console.log("Con estos precios: " + preciosProductos)
     console.log("Con un coste total de: " + precioTotal)
 </script>

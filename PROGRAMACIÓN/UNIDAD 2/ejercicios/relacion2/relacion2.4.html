@@ -4,15 +4,34 @@
     let opciones = ""
     let libro = ""
     let cantidad = 0
-    while (opciones != "4"){
-    opciones = Number(prompt("1. Elige una de estas opciones: \N Añadir un nuevo libro al inventario (con su título y cantidad). \N 2 . Actualizar la cantidad de un libro existente. \N 3. Ver el inventario completo (título y cantidad de cada libro). \N 4. Salir del programa. "))
-    if (opciones != 4){
-        if (opciones == 1){
-            libro = prompt("Introduce el titulo del libro")
-            cantidad = Number(prompt("Introduce la cantidad de libros"))
-            titulosLibros.push(libro)
-            cantidadLibros.push(cantidad)
+    let cantidadNueva = 0
+    while (opciones != "4") {
+        opciones = Number(prompt("Elige una de estas opciones: \n 1. Añadir un nuevo libro al inventario (con su título y cantidad). \n 2 . Actualizar la cantidad de un libro existente. \n 3. Ver el inventario completo (título y cantidad de cada libro). \n 4. Salir del programa. "))
+        if (opciones != 4) {
+            if (opciones == 1) {
+                libro = prompt("Introduce el titulo del libro")
+                cantidad = Number(prompt("Introduce la cantidad de libros"))
+                titulosLibros.push(libro)
+                cantidadLibros.push(cantidad)
+            }
+            if (opciones == 2) {
+                libro = prompt("Introduce el titulo del libro")
+                for (let i = 0; i < titulosLibros.length; i++) {
+                    if (libro == titulosLibros[i]) {
+                        cantidadNueva = Number(prompt("Introduce la cantidad nueva del libro "))
+                        if (cantidadNueva < 0) {
+                            alert("Introduce una cantidad mayor que 0")
+                            cantidadNueva = Number(prompt("Introduce la cantidad nueva del libro " + libro[i]))
+                        }
+                        cantidadLibros[i] = cantidadNueva
+                    }
+                }
+            }
+            if (opciones == 3) {
+                for (let i = 0; i < titulosLibros.length; i++) {
+                    console.log("El titulo: " + titulosLibros[i] + " tiene la cantidad: " + cantidadLibros[i])
+                }
+            }
         }
-    }
     }
 </script>
