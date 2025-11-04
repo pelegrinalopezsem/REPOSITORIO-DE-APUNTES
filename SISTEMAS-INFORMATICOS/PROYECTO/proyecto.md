@@ -69,19 +69,31 @@ sudo mkdir src docs config recovery
 sudo touch src/.c src/.py src/.java
 sudo touch config/app.conf config/database.ini config/settings.yaml recovery/backup_11:21.sql recovery/backup_31.sql
 sudo touch docs/manual.txt docs/guia.md
+sudo chown root:administrador compartido/
+sudo chmod 755 compartido/
 ```
 - b. los únicos que deberian tener archivos de escritura sobre los archivos de
 confguración (config) deberán ser los administradores. El código fuente solo deberían poder modificarlo los tecnicos y los administradores, mientras que todos deberían tener permiso de lectura para toda la carpeta compartida.
 Los archivos de recovery deberían ser suscptibles de ser modificados solo por los administradores, pero leido por todos.
 ``` bash
-sudo chown root:administrador compartido/
-sudo chmod 755 compartido/
-sudo chown root:administrador config/
-sudo chmod 755 config/
-sudo chmod 444 docs/
-sudo chmod 444 src/
-sudo chmod 474 recovery/
+sudo chown root:desarrolladores config/
+sudo chmod 750 config/
+sudo chmod 754 src/
+
 ```
+-c. El código fuente solo deberían poder modificarlo los desarrolladores y los
+administradores, mientras que todos los demás deberían tener permiso de
+lectura para toda la carpeta compartida. Los archivos de recovery deberían ser susceptibles de ser modificados solo por los administradores, pero leído por todos.
+```bash
+sudo chmod 744 recovery/
+```
+- d. la documentación deberá poderse modificar solo por técnicos,
+desarrolladores y administradores, pero si hay más usuarios en el sistema
+deberían solo poder leer el contenido de los archivos
+```bash
+sudo chmod 764 docs/
+```
+
 
 *** 3.Automatizacion***
 3.3. Genera las órdenes pertinentes para que, una vez al día, el sistema se
