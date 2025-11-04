@@ -1,0 +1,42 @@
+<script>
+    let tareas = []
+    let estados = []
+    let opcion = ""
+    let tarea = ""
+    let estado = ""
+    let pendientes = "false"
+    let completado = "true"
+    while (opcion != 5) {
+        opcion = prompt("Introduce una de estas opciones: \n 1.Añadir una nueva tarea. \n 2.Marcar una tarea como completada. \n 3.Ver la lista de tareas pendientes. \n 4.Ver la lista de tareas completadas. \n 5.Salir del programa.    ")
+        if (opcion != 5) {
+            if (opcion == 1) {
+                tarea = prompt("Introduce una tarea: ")
+                estado = "false"
+                tareas.push(tarea)
+                estados.push(estado)
+            }
+            if (opcion == 2) {
+                tarea = prompt("Que tarea has completado: ")
+                for (let i = 0; i < tareas.length; i++) {
+                    if (tarea == tareas[i]) {
+                        estados[i] = "true"
+                    }
+                }
+            }
+            if (opcion == 3) {
+                for (let i = 0; i < estados.length; i++) {
+                    if (pendientes == estados[i]) {
+                        console.log(tareas[i] + " : " + estados[i])
+                    }
+                }
+            }
+            if (opcion == 4) {
+                for (let i = 0; i < estados.length; i++) {
+                    if (completado == estados[i]) {
+                        console.log(tareas[i] + " : " + estados[i])
+                    }
+                }
+            }
+        }
+    }
+</script>

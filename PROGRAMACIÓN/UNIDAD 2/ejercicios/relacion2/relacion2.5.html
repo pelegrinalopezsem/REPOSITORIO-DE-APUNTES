@@ -8,27 +8,40 @@
     let calcularPromedio = 0
     let maxNota = 0
     let alumnoMax = ""
-    while (opcion != "FIN") {
+    let minNota = 0
+    let alumnoMIin = ""
+    while (opcion != 5) {
         opcion = Number(prompt("1. Añadir un estudiante y su calificación \n 2.Mostrar la calificación promedio de la clase\n 3. Mostrar la calificación más alta y el nombre del estudiante correspondiente \n 4. Mostrar la calificación más baja y el nombre del estudiante correspondiente \n 5. Salir del programa"))
-        if (opcion == 1){
-            nombre = prompt("Introduce el nombre del alumno")
-        calificación = Number(prompt("Introduce la calificacion de " + nombre))
-        nombres.push(nombre)
-        calificaciones.push(calificación)
-        promedioCalificacion += calificaciones
-        }
-    if(opcion == 2){
-        calcularPromedio = (promedioCalificacion / nombre.length).toFixed(2)
-        console.log("El promedio de la clase es: " + calcularPromedio)
-    }
-    if(opcion == 3) {
-        maxNota = calificaciones
-        for (let i = 0; i < calificaciones.length; i++) {
-            if (maxNota == calificaciones[i]){
-                alumnoMax = nombre[i]
+        if (opcion != 5) {
+            if (opcion == 1) {
+                nombre = prompt("Introduce el nombre del alumno")
+                calificación = Number(prompt("Introduce la calificacion de " + nombre))
+                nombres.push(nombre)
+                calificaciones.push(calificación)
+                promedioCalificacion += calificaciones
+            }
+            if (opcion == 2) {
+                calcularPromedio = (promedioCalificacion / nombres.length).toFixed(2)
+                console.log("El promedio de la clase es: " + calcularPromedio)
+            }
+            if (opcion == 3) {
+                maxNota = Math.max(calificaciones)
+                for (let i = 0; i < calificaciones.length; i++) {
+                    if (maxNota == calificaciones[i]) {
+                        alumnoMax = nombre[i]
+                    }
+                }
+                console.log("El alumno: " + alumnoMax + " ha sacado la nota mas alta que es: " + maxNota)
+            }
+            if (opcion == 4) {
+                minNota = Math.min(calificaciones)
+                for (let i = 0; i < calificaciones.length; i++) {
+                    ;
+                    if (minNota == calificaciones[i])
+                        alumnoMin = nombre[i]
+                }
+                console.log("El alumno: " + alumnoMin + " ha sacado la nota mas baja que es: " + minNota)
             }
         }
-        console.log("El alumno: " + alumnoMax + " ha sacado la nota mas alta que es: " + maxNota)
     }
-}
 </script>
