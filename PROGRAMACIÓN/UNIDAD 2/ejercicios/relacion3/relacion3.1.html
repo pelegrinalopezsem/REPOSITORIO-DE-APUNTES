@@ -1,0 +1,14 @@
+<script>
+    let palabras = ["apple", "banana", "kiwi", "watermelon"];
+    let NumeroMasLargo = 0;
+    let palabraMasLarga = "";
+
+    for (let i = 0; i < palabras.length; i++) {
+        if (palabras[i].length > NumeroMasLargo) {
+            NumeroMasLargo = palabras[i].length;
+            palabraMasLarga = palabras[i];
+        }
+    }
+
+    console.log(palabraMasLarga); 
+</script>
