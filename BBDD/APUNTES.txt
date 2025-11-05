@@ -1,0 +1,57 @@
+Ciudadano (DNI, nombre, fecha_nacimiento, ciudad_nacimiento)
+
+Delito (id_delito, nombre, pena_minima, pena_maxima)
+
+Sentencia (id_sentencia, fecha_emision, es_firme, tipo_sentencia)
+
+Juez (id_juez, nombre)
+
+Sala (id_sala, nombre, id_tribunal → Tribunal)
+
+Tribunal (id_tribunal, nombre, fecha_apertura, ambito)
+
+Juicio (id_juicio, fecha, id_sala → Sala)
+
+Abogado (id_abogado, nombre, tipo_abogado [defensor/acusador])
+
+Eximente/Atenuante/Agravante (id_factor, tipo, descripcion, anios_afecta)
+
+
+
+Voy a generarte la hoja con estas tablas:
+
+INTEGRANTE (ID_INTEGRANTE*, NOMBRE, EDAD, SALARIO)
+
+INGENIERO (ID_INGENIERO*, AÑOS_EXPERIENCIA, ID_INTEGRANTE)
+
+MECÁNICO (ID_MECANICO*, HORAS_FORMACION, FUNCIÓN, ID_INTEGRANTE)
+
+PILOTO (ID_PILOTO*, TITULOS_CAMPEON, CARRERAS_GANADAS, PUESTO_LOGRADO, ID_INTEGRANTE)
+
+EQUIPO (ID_EQUIPO*, NOMBRE, MOTOR, PATROCINADOR_PRINCIPAL)
+
+TEMPORADA (ID_TEMPORADA*, AÑO_INICIO, AÑO_FIN)
+
+GRAN_PREMIO (ID_GP*, NOMBRE, CIRCUITO)
+
+COCHE (ID_COCHE*, PESO, ACELERACION_MAXIMA)
+
+Y las relaciones intermedias:
+
+PERTENECE (ID_INTEGRANTE, ID_EQUIPO)
+
+DIRIGE (ID_INGENIERO, ID_EQUIPO)
+
+DISEÑA (ID_INGENIERO, ID_COCHE)
+
+MANTIENE (ID_MECANICO, ID_COCHE)
+
+PILOTA (ID_PILOTO, ID_COCHE)
+
+COMPITE (ID_PILOTO, ID_GRAN_PREMIO)
+
+DIVIDE (ID_GRAN_PREMIO, ID_TEMPORADA)
+
+Además incluiré una tabla especial “ES_UN” para indicar las subclases de INTEGRANTE:
+
+ES_UN (ID_INTEGRANTE, TIPO → valores posibles: “INGENIERO”, “MECÁNICO”, “PILOTO”).
