@@ -101,21 +101,23 @@ asegure que no hay archivos fuera de sus carpetas. Debería quedar en
 /opt/compartido:
 - a. En src los ejecutables y codigo fuente (.py, .c, .cpp, .js, .sh todos los que sepáis).
 ```bash
-find src/ -type f ! \( -name "*.py" -o -name "*.c" -o -name "*.cpp" -o -name "*.js" -o -name "*.sh" \) -delete
+find /opt/compartido/src/ -type f ! \( -name "*.py" -o -name "*.c" -o -name "*.cpp" -o -name "*.js" -o -name "*.sh" \) -exec mv {} /opt/compartido/src/ \;
 ```
 - b. En config los archivos de configuración (.cfg)
 ```bash
-find config/ -type f ! -name "*.cfg" -delete
+find /opt/compartido/config/ -type f ! -name "*.cfg" -exec mv {} /opt/compartido/config/ \;
 ```
 - c. En docs la documentacion (.pdf, .md, .doc, .odt, .docx, .txt)
 ```bash
-ffind docs/ type f ! \( -name "*.pdf" -o -name "*.md" -o -name "*.doc" -o -name "*.odt" -o -name "*.docx" -o -name "*.txt" \) -delete
+find /opt/compartido/docs/ -type f ! \( -name "*.pdf" -o -name "*.md" -o -name "*.doc" -o -name "*.odt" -o -name "*.docx" -o -name "*.txt" \) -exec mv {} /opt/compartido/docs/ \;
 
 ```
 - d. En recovery los archivos de recuperacion de la base de datos (.sql)
 ```bash
-find recovery/ -type f ! -name "*.sql" -delete
+find /opt/compartido/recovery/ -type f ! -name "*.sql" -exec mv {} /opt/compartido/recovery/ \;
 ```
 ```bash
 0 0 * * * /usr/opt/compartido/borrado.sh
 ```
+
+**EXPLICACION DEL SCRIPT**
