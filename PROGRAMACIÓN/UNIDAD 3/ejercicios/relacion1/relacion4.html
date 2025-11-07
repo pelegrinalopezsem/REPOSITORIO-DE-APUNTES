@@ -1,0 +1,15 @@
+<script>
+    function esPar(numero) {
+        let par = ""
+        let operacion = (numero % 2)
+        if (operacion == 0) {
+            par = true
+        } else {
+            par = false
+        }
+        return par
+    }
+    let numero = Number(prompt("Introduce un numero"))
+    let resultado = esPar(numero)
+    console.log(resultado)
+</script>
