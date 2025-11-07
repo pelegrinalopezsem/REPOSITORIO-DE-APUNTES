@@ -120,4 +120,4 @@ find /opt/compartido/recovery/ -type f ! -name "*.sql" -exec mv {} /opt/comparti
 0 0 * * * /usr/opt/compartido/borrado.sh
 ```
 
-**EXPLICACION DEL SCRIPT**
+
