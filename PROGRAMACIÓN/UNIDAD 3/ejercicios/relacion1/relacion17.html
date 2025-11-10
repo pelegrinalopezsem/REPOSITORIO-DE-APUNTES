@@ -1,0 +1,14 @@
+<script>
+    function revertirCadena(cadena,cadenaInvertida) {
+        for (let i = cadena.length; i >= 0 ; i--) {
+            cadenaInvertida.push(cadena[i])
+        }
+        return cadenaInvertida
+    }
+    
+    let saludo = "Hola, Mundo"
+    let cadena = saludo.split(", ")
+    let cadenaInvertida = []
+    let resultado = revertirCadena(cadena,cadenaInvertida)
+    console.log(resultado)
+</script>

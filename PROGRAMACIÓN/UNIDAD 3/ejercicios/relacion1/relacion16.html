@@ -1,0 +1,15 @@
+<script>
+    let numeros = [23,15,66,74,33]
+    let verificado = false
+    let numeroBuscado = Number(prompt("Introduce un numero que quieras buscar"))
+    function verificarNumeroEnArray(verificado,numeros,numeroBuscado){
+        for (let i = 0; i < numeros.length; i++ && verificado == true) {
+            if (numeros[i] == numeroBuscado){
+                verificado = true
+            }
+        }
+        return verificado
+    }
+    let resultado = verificarNumeroEnArray(verificado,numeros,numeroBuscado)
+    console.log(resultado)
+</script>

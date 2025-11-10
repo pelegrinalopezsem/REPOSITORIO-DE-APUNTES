@@ -1,0 +1,14 @@
+<script>
+    function promedioArray(numeros) {
+        for (let i = 0; i < numeros.length; i++) {
+        suma += numeros[i];
+    }
+        let promedioArray = suma / numeros.length;
+        return promedioArray;
+    }
+
+    let numeros = [23, 15, 14, 69, 33];
+    let suma = 0;
+    let resultado = promedioArray(numeros);
+    console.log(resultado);
+</script>

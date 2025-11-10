@@ -1,0 +1,14 @@
+<script>
+    function contarVocalesEnCadena(letraBusqueda,frase) {
+        let conteoLetra = 0
+        for (let i = 0; i < frase.length; i++) {
+            if (letraBusqueda == frase[i])
+            conteoLetra++
+    }
+    return conteoLetra
+}
+    let letraBusqueda = prompt("Introduce una letra que quieras buscar")
+    let frase = "JavaScript es divertido"
+    let resultado = contarVocalesEnCadena(letraBusqueda,frase)
+    console.log(resultado)
+</script>

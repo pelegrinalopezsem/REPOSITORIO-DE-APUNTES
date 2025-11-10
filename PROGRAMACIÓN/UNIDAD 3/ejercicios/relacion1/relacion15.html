@@ -1,0 +1,14 @@
+<script>
+    function filtrarNumerosMayores(numeros, valor, numerosMayores) {
+        for (let i = 0; i < numeros.length; i++) {
+            if (valor < numeros[i])
+            numerosMayores.push(numeros[i])
+    }
+        return numerosMayores
+    }
+    let numeros = [23,15,66,74,33]
+    let valor = Number(prompt("Introduce un numero"))
+    let numerosMayores = []
+    let resultado = filtrarNumerosMayores(numeros, valor, numerosMayores)
+        console.log(resultado)
+</script>
