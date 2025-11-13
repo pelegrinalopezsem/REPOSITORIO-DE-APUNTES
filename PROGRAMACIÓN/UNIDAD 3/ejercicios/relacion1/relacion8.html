@@ -1,3 +1,11 @@
 <script>
-    
+    function elementoAleatorio(ABECEDARIO) {
+        let numeroAbecedario = Math.floor(Math.random() * ABECEDARIO.leght) + 1
+        let resultado = ABECEDARIO[numeroAbecedario]
+            return resultado
+    }
+    const ABECEDARIO = [
+    'a','b','c','d','e','f','g','h','i','j','k','l','m',
+    'n','ñ','o','p','q','r','s','t','u','v','w','x','y','z'];
+    console.log(elementoAleatorio(ABECEDARIO))
 </script>

@@ -1,0 +1,255 @@
+<script>
+    let oros = [1,2,3,4,5,6,7,8,9,10]
+    let bastos = [1,2,3,4,5,6,7,8,9,10]
+    let espadas = [1,2,3,4,5,6,7,8,9,10]
+    let copas = [1,2,3,4,5,6,7,8,9,10]
+
+    let sumaDeCartasPrimerJugador = 0
+    let sumaDeCartasSegundoJugador = 0
+    let opciones = 0
+    let manoPrimerJugador = []
+    let manoSegundoJugador = []
+    let Ymedio = 0.5
+    let numeroPalos = 0
+    let palos = ""
+    let jugador = 0   // 0 = primer jugador, 1 = segundo jugador
+    let numeroAleatorio = 0
+
+    const LIMITE = 7.5
+
+    while (opciones != 4) {
+        opciones = Number(prompt(
+            "QUE QUIERES HACER" +
+            "\n1.PEDIR CARTAR \n2.JUEGA EL SEGUNDO JUGADOR \n3.¿QUIEN HA GANADO? \n4. FIN "
+        ))
+
+        // Elegir palo aleatorio
+        numeroPalos = Math.floor(Math.random() * 4) + 1
+
+        if (numeroPalos == 1) {
+            palos = oros
+        } else if (numeroPalos == 2) {
+            palos = bastos
+        } else if (numeroPalos == 3) {
+            palos = espadas
+        } else {
+            palos = copas
+        }
+
+        // Opción 1: pedir carta
+        if (opciones == 1) {
+
+            // OROS
+            if (numeroPalos == 1) {
+                numeroAleatorio = Math.floor(Math.random() * oros.length)
+
+                if (jugador == 0) { // primer jugador
+                    if (numeroAleatorio < 8) {
+                        sumaDeCartasPrimerJugador += oros[numeroAleatorio]
+                        alert("Te ha tocado el " + oros[numeroAleatorio] + " de oros")
+                        manoPrimerJugador.push(oros[numeroAleatorio])
+                    } else {
+                        sumaDeCartasPrimerJugador += Ymedio
+                        if (numeroAleatorio == 8) {
+                            alert("Te ha tocado el 10 de oros")
+                            manoPrimerJugador.push("10")
+                        } else if (numeroAleatorio == 9) {
+                            alert("Te ha tocado el 11 de oros")
+                            manoPrimerJugador.push("11")
+                        } else {
+                            alert("Te ha tocado el 12 de oros")
+                            manoPrimerJugador.push("12")
+                        }
+                    }
+                } else { // segundo jugador
+                    if (numeroAleatorio < 8) {
+                        sumaDeCartasSegundoJugador += oros[numeroAleatorio]
+                        manoSegundoJugador.push(oros[numeroAleatorio])
+                    } else {
+                        sumaDeCartasSegundoJugador += Ymedio
+                        if (numeroAleatorio == 8) {
+                            manoSegundoJugador.push("10")
+                        } else if (numeroAleatorio == 9) {
+                            manoSegundoJugador.push("11")
+                        } else {
+                            manoSegundoJugador.push("12")
+                        }
+                    }
+                }
+
+                oros.splice(numeroAleatorio, 1)
+
+            // BASTOS
+            } else if (numeroPalos == 2) {
+                numeroAleatorio = Math.floor(Math.random() * bastos.length)
+
+                if (jugador == 0) {
+                    if (numeroAleatorio < 8) {
+                        sumaDeCartasPrimerJugador += bastos[numeroAleatorio]
+                        alert("Te ha tocado el " + bastos[numeroAleatorio] + " de bastos")
+                        manoPrimerJugador.push(bastos[numeroAleatorio])
+                    } else {
+                        sumaDeCartasPrimerJugador += Ymedio
+                        if (numeroAleatorio == 8) {
+                            alert("Te ha tocado el 10 de bastos")
+                            manoPrimerJugador.push("10")
+                        } else if (numeroAleatorio == 9) {
+                            alert("Te ha tocado el 11 de bastos")
+                            manoPrimerJugador.push("11")
+                        } else {
+                            alert("Te ha tocado el 12 de bastos")
+                            manoPrimerJugador.push("12")
+                        }
+                    }
+                } else {
+                    if (numeroAleatorio < 8) {
+                        sumaDeCartasSegundoJugador += bastos[numeroAleatorio]
+                        manoSegundoJugador.push(bastos[numeroAleatorio])
+                    } else {
+                        sumaDeCartasSegundoJugador += Ymedio
+                        if (numeroAleatorio == 8) {
+                            manoSegundoJugador.push("10")
+                        } else if (numeroAleatorio == 9) {
+                            manoSegundoJugador.push("11")
+                        } else {
+                            manoSegundoJugador.push("12")
+                        }
+                    }
+                }
+
+                bastos.splice(numeroAleatorio, 1)
+
+            // ESPADAS
+            } else if (numeroPalos == 3) {
+                numeroAleatorio = Math.floor(Math.random() * espadas.length)
+
+                if (jugador == 0) {
+                    if (numeroAleatorio < 8) {
+                        sumaDeCartasPrimerJugador += espadas[numeroAleatorio]
+                        alert("Te ha tocado el " + espadas[numeroAleatorio] + " de espadas")
+                        manoPrimerJugador.push(espadas[numeroAleatorio])
+                    } else {
+                        sumaDeCartasPrimerJugador += Ymedio
+                        if (numeroAleatorio == 8) {
+                            alert("Te ha tocado el 10 de espadas")
+                            manoPrimerJugador.push("10")
+                        } else if (numeroAleatorio == 9) {
+                            alert("Te ha tocado el 11 de espadas")
+                            manoPrimerJugador.push("11")
+                        } else {
+                            alert("Te ha tocado el 12 de espadas")
+                            manoPrimerJugador.push("12")
+                        }
+                    }
+                } else {
+                    if (numeroAleatorio < 8) {
+                        sumaDeCartasSegundoJugador += espadas[numeroAleatorio]
+                        manoSegundoJugador.push(espadas[numeroAleatorio])
+                    } else {
+                        sumaDeCartasSegundoJugador += Ymedio
+                        if (numeroAleatorio == 8) {
+                            manoSegundoJugador.push("10")
+                        } else if (numeroAleatorio == 9) {
+                            manoSegundoJugador.push("11")
+                        } else {
+                            manoSegundoJugador.push("12")
+                        }
+                    }
+                }
+
+                espadas.splice(numeroAleatorio, 1)
+
+            // COPAS
+            } else {
+                numeroAleatorio = Math.floor(Math.random() * copas.length)
+
+                if (jugador == 0) {
+                    if (numeroAleatorio < 8) {
+                        sumaDeCartasPrimerJugador += copas[numeroAleatorio]
+                        alert("Te ha tocado el " + copas[numeroAleatorio] + " de copas")
+                        manoPrimerJugador.push(copas[numeroAleatorio])
+                    } else {
+                        sumaDeCartasPrimerJugador += Ymedio
+                        if (numeroAleatorio == 8) {
+                            alert("Te ha tocado el 10 de copas")
+                            manoPrimerJugador.push("10")
+                        } else if (numeroAleatorio == 9) {
+                            alert("Te ha tocado el 11 de copas")
+                            manoPrimerJugador.push("11")
+                        } else {
+                            alert("Te ha tocado el 12 de copas")
+                            manoPrimerJugador.push("12")
+                        }
+                    }
+                } else {
+                    if (numeroAleatorio < 8) {
+                        sumaDeCartasSegundoJugador += copas[numeroAleatorio]
+                        manoSegundoJugador.push(copas[numeroAleatorio])
+                    } else {
+                        sumaDeCartasSegundoJugador += Ymedio
+                        if (numeroAleatorio == 8) {
+                            manoSegundoJugador.push("10")
+                        } else if (numeroAleatorio == 9) {
+                            manoSegundoJugador.push("11")
+                        } else {
+                            manoSegundoJugador.push("12")
+                        }
+                    }
+                }
+
+                copas.splice(numeroAleatorio, 1)
+            }
+
+            // Mensajes según el jugador que está jugando
+            if (jugador == 0) {
+                if (sumaDeCartasPrimerJugador > LIMITE) {
+                    alert("TE HAS PASADO")
+                } else if (sumaDeCartasPrimerJugador == LIMITE) {
+                    alert("QUE SUERTE TIENES")
+                } else {
+                    alert("SIGUE JUGANDO")
+                }
+
+                console.log(
+                    "TU MANO ES " + manoPrimerJugador +
+                    "\nLA SUMA DE LAS CARTAS ES: " + sumaDeCartasPrimerJugador
+                )
+            } else {
+                if (sumaDeCartasSegundoJugador > LIMITE) {
+                    alert("TE HAS PASADO")
+                } else if (sumaDeCartasSegundoJugador == LIMITE) {
+                    alert("QUE SUERTE TIENES")
+                } else {
+                    alert("SIGUE JUGANDO")
+                }
+                
+                console.log(
+                    "TU MANO ES " + manoSegundoJugador +
+                    "\nLA SUMA DE LAS CARTAS ES: " + sumaDeCartasSegundoJugador
+                )
+            }
+
+        // Opción 2: empieza a jugar el segundo jugador
+        } else if (opciones == 2) {
+            jugador = 1
+            console.log("EMPIEZA A JUGAR EL SEGUNDO JUGADOR")
+
+        // Opción 3 
+        } else if (opciones == 3){
+            if (
+                sumaDeCartasPrimerJugador > sumaDeCartasSegundoJugador &&
+                sumaDeCartasPrimerJugador <= LIMITE
+            ) {
+                console.log("El primer jugador ha GANADO")
+            }
+        
+            if (
+                sumaDeCartasSegundoJugador > sumaDeCartasPrimerJugador &&
+                sumaDeCartasSegundoJugador <= LIMITE
+            ) {
+                console.log("El segundo jugador ha GANADO")
+            }
+        }
+    }
+</script>
+
