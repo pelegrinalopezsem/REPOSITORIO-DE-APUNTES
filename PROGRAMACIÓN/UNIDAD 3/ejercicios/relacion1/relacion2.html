@@ -1,10 +1,14 @@
 <script>
-    function sumar(numeroUno, numeroDos) {
-        return numeroUno + numeroDos
+    function lanzarDado() {
+        let resultado = Math.floor(Math.random() * 6) + 1
+        return resultado
     }
-    
-    let numeroUno = Number(prompt("Introduce un numero"))
-    let numeroDos = Number(prompt("Introduce un numero"))
-    let resultado = sumar(numeroUno, numeroDos)
-    console.log(resultado)
+
+    function lanzarDosDados() {
+        let dado1 = lanzarDado()
+        let dado2 = lanzarDado()
+        let suma = dado1 + dado2
+        return suma
+    }
+    console.log(lanzarDosDados())
 </script>

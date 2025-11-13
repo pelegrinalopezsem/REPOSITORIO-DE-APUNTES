@@ -1,18 +1,25 @@
 <script>
-    function menorDeTres(primerNumero,segundoNumero,tercerNumero) {
-        let esMayor = 0
-        if (primerNumero > segundoNumero && primerNumero > tercerNumero){
-            return esMayor = primerNumero
-        } else if (segundoNumero > primerNumero && segundoNumero > tercerNumero){
-            return esMayor = segundoNumero
-        } else {
-            return esMayor = tercerNumero
+    function generarContraseña(longitud) {
+        let opciones = ""
+        let contraseña = []
+        let numeroAleatorio = ""
+        let numeroAbecedario = ""
+        const ABECEDARIO = [
+            'a','b','c','d','e','f','g','h','i','j','k','l','m',
+            'n','ñ','o','p','q','r','s','t','u','v','w','x','y','z'];
+        for (let i = 0; i < MAX; i++) {
+            opciones = Math.floor(Math.random() * 2)
+            if (opciones == 0){
+                numeroAleatorio = Math.floor(Math.random() * 9) + 1
+                contraseña.push(numeroAleatorio)
+            } else {
+                numeroAbecedario = Math.floor(Math.random() * 27) + 1
+                contraseña.push(ABECEDARIO[numeroAbecedario])
+            }
         }
+        return contraseña
     }
-    
-    let primerNumero = Number(prompt("Introduce un numero"))
-    let segundoNumero = Number(prompt("Introduce un numero"))
-    let tercerNumero = Number(prompt("Introduce un numero"))
-    let resultado = menorDeTres(primerNumero,segundoNumero,tercerNumero)
-    console.log("el numero mas grande es: ", resultado)
+    let longitud = Math.floor(Math.random() * 9) + 8
+    let resultado = generarContraseña(longitud)
+    console.log("la contraseña es: ", resultado.join(''))
 </script>

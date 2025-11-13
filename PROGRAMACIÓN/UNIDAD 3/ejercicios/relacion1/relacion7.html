@@ -1,9 +1,17 @@
 <script>
-    function celsiusAFahrenheit (Celsius) {
-        let conversion = (Celsius * 9/5) + 32
-        return conversion
+    function juegoAdivinaNumero(MAX) {
+    let numeroAleatorio = Math.floor(Math.random() * MAX) + 1
+    let adivinaNumero = Number(prompt("Introduce un numero entre el 1 y el 10"))
+    let resultado = ""
+            if (adivinaNumero == numeroAleatorio){
+                resultado = "HAS ACERTADO"
+            }else if (adivinaNumero > numeroAleatorio){
+                resultado = "TU NUMERO ES MAS GRANDE"
+            } else {
+                resultado = "TU NUMERO ES MAS PEQUEÑO"
     }
-    let Celsius = Number(prompt("Introduce los grados en Celsius"))
-    let resultado = celsiusAFahrenheit(Celsius)
-    console.log(resultado)
+    return resultado
+}
+const MAX = 10
+console.log( juegoAdivinaNumero(MAX))
 </script>

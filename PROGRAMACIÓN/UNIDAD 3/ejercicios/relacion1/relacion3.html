@@ -1,8 +1,13 @@
 <script>
-    function cuadrado(numero) {
-        return numero * numero
+    function arrayAleatorio(cantidad, max) {
+        let numerosAleatorios = []
+        let aleatorio = 0
+        for (let i = 0; i < cantidad; i++) {
+            aleatorio = Math.floor(Math.random() * max) + 1
+            numerosAleatorios.push(aleatorio)
+        }
     }
-    let numero = Number(prompt("Introduce un numero"))
-    let resultado = cuadrado(numero)
-    console.log(resultado)
+    let cantidad = 5
+    let max = 20
+    console.log(arrayAleatorio(cantidad, max))
 </script>

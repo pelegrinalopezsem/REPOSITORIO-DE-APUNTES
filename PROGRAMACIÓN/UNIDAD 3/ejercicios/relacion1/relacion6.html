@@ -1,13 +1,8 @@
 <script>
-    function esPositivo(numero) {
-        let positivo = ""
-        if (numero < 0) {
-            return positivo = false
-        } else {
-            return positivo = true
-        }
+    function lanzarDadoPersonalizado() {
+        let caras = Number(prompt("Introduce el numero de caras"))
+        let numeroAleatorio = Math.floor(Math.random() * caras) + 1
+        return numeroAleatorio
     }
-    let numero = Number(prompt("Introduce un numero entero"))
-    let resultado = esPositivo(numero)
-    console.log(resultado)
+    console.log(lanzarDadoPersonalizado())
 </script>

@@ -1,12 +1,25 @@
 <script>
-    function factorial(numero) {
-        let resultado = 1
-        for (let i = 1; i <= numero; i++) {
-            resultado *= i
-        }
+    function caraOCruz() {
+        let moneda = Math.floor(Math.random() * 2)
+        let resultado = ""
+            if (moneda == 0){
+                resultado = "cara"
+            } else {
+                resultado = "cruz"
+            }
         return resultado
-    }
-    let numero = Number(prompt("Introduce un numero entero"))
-    let resultado = factorial(numero)
-    console.log("El factorial de ", numero , " es ", resultado)
+        }
+    
+        function listaCarasOCruces(CANTIDAD) {
+            let intento = ""
+            let listaDeResultados = []
+            for (let i = 0; i < CANTIDAD; i++) {
+                intento = caraOCruz()
+                listaDeResultados.push(intento)
+            }
+            return listaDeResultados
+        }
+    const CANTIDAD = 10
+    console.log(listaCarasOCruces(CANTIDAD))
+    console.log (caraOCruz())
 </script>

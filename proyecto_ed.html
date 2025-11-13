@@ -1,0 +1,32 @@
+<script>
+    let palabraSecreta=prompt("Introduce una palabra para el AHORCADO")
+    let letra = ""
+    let guion = "_"
+    let fallo = 0
+    let cuerpo = []
+    let letras = []
+    let guiones = []
+    let resultado = []
+    for (let i = 0; i < palabraSecreta.length; i++) {
+        letras.push(palabraSecreta[i])
+        guiones.push(guion)
+    console.log("Tu palabra secreta es: " + guiones)
+    }
+    while (fallos != 6){
+    letra = prompt("Introduce una letra")
+        for (let i = 0; i < letras.length; i++) {
+            if (letra == letras[i]){
+                resultado.push(letras[i])
+        } else if (letra != letras[i]){
+                resultado.push(guiones[i])
+                fallo++
+        }
+    }
+    if (fallo == 1){
+        cuerpo.push("🤯")
+    } else if (fallo == 2){
+        cuerpo.push("👕")
+    }
+}
+    console.log("PALABRA SECRETA: " + resultado)
+</script>

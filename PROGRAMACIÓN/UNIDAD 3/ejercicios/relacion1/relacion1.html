@@ -1,8 +1,8 @@
 <script>
-    function saludar(nombre) {
-        return "HOLA " + nombre
+    function lanzarDado() {
+        let resultado = Math.floor(Math.random() * 6) + 1
+        return resultado
     }
-    let nombre = prompt("Introduce un nombre")
-    let saludo = saludar(nombre)
-    console.log(saludo)
+    let resultadoDado = lanzarDado()
+    alert("resultado: " + resultadoDado)
 </script>
