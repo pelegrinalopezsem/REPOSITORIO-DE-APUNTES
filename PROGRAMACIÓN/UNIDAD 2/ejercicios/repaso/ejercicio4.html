@@ -1,0 +1,34 @@
+<script>
+    let mina = ["si","si","no","no","no","si","no","no","no","si"]
+    let posiciones = []
+    let contadorAlrededor = 0
+    let contadorMinas = 0
+    let explota = false
+    let posicionDescubrir = ""
+    for (let i = 0; i < mina.length && explota == false; i++ ) {
+        contadorAlrededor= 0
+        posicionDescubrir = Number(prompt("Introduce la posicion que quieres descubir"))
+        for (let i = 0; i < mina.length; i++) {
+            if (posicionDescubrir == posiciones[i]){
+                posicionDescubrir = Number(prompt("Di otra posicion que no hayas dicho"))
+            }
+        }
+                if (mina[posicionDescubrir] == "si"){
+                    alert("HAS ENCONTRADO UNA MINA")
+                    explota = true
+                } else {
+                alert("NO HAY MINA")
+                if (mina[posicionDescubrir - 1] == "si"){
+                    contadorAlrededor++
+                } if (mina [posicionDescubrir + 1] == "si"){
+                    contadorAlrededor++
+                }
+                posiciones.push(posicionDescubrir)
+                alert ("Tienes " + contadorAlrededor + " minas alrededor")
+                console.log(posiciones)
+            }
+        }
+    if (explota == true){
+        alert("TE HA EXPLOTADO LA BOMBA")
+    }
+</script>

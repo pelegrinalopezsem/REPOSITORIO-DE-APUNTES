@@ -1,0 +1,45 @@
+<script>
+    let jugadores = []
+    let puntuaciones = []
+    let opciones = ""
+    let jugador = ""
+    let puntos = ""
+    let sumaDePuntos = 0
+    let puntosTotales = 0
+    let mediaPuntos = 0
+    while (opciones != 5){
+        opciones = Number(prompt("1.Añadir jugador \n2. Registrar ronda (sumar puntos a cada jugador). \n3. Mostrar clasificación. \n4. Mostrar jugadores por encima de la media \n5. Reiniciar puntuaciones. \n6. Salir"))
+        if (opciones == 1){
+            jugador = prompt("Introduce el nombre del jugador")
+            jugadores.push(jugador)
+            puntos = Number(prompt("Introduce los puntos del jugador"))
+            puntuaciones.push(puntos)
+        } else if (opciones == 2){
+            for (let i = 0; i < jugadores.length; i++) {
+                puntos = Number(prompt("Introduce los puntos del jugador " + jugadores[i]))
+                sumaDePuntos = puntuaciones[i] + puntos
+                puntuaciones[i] = sumaDePuntos
+            } 
+        } else if (opciones == 3){
+            for (let i = 0; i < jugadores.length; i++) {
+                console.log(jugadores[i] + " : " + puntuaciones[i])
+                puntosTotales += puntuaciones[i]
+                mediaPuntos = (puntosTotales / puntuaciones.length).toFixed(2)
+            }
+        } else if (opciones == 4){
+            for (let i = 0; i < puntuaciones.length; i++) {
+            if (mediaPuntos <= puntuaciones[i]){
+                console.log("La puntuacion media de los jugadores es: " + mediaPuntos)
+                console.log(jugadores[i] + " : " + puntuaciones[i])
+            }
+            }
+            
+        } else if (opciones == 5){
+            for (let i = 0; i < puntuaciones.length; i++) {
+            puntuaciones[i] = 0
+            }
+        } else {
+            alert("ADIOS")
+        }
+    }   
+</script>

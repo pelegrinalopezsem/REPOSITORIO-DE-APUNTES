@@ -1,0 +1,54 @@
+<script>
+    let cartas = ["pickachu" , "charmander" , "raichu", "new"]
+    let precios = [9.66, 8.4, 20, 15.33]
+    let carrito = []
+    let cantidades = []
+    let comprar = ""
+    let cantidad = 0
+    let precioTotal = 0
+    let opciones = ""
+
+    while (opciones != "fin") {
+        opciones = prompt("¿QUE QUIERES HACER?\n- COMPRAR \n- CARRITO \n- SALIR").toLowerCase()
+
+        if (opciones == "comprar") {
+
+            comprar = prompt("¿Que carta quieres comprar?").toLowerCase()
+            // Comprobamos si la carta existe
+            let indiceCarta = cartas.indexOf(comprar)
+
+            if (indiceCarta == -1) {
+                alert("Esa carta no existe")
+            } else {
+                carrito.push(comprar)
+                cantidad = Number(prompt("¿Cuantas quieres?"))
+                cantidades.push(cantidad)
+            }
+
+        } else if (opciones == "carrito") {
+
+            precioTotal = 0  
+            console.clear()
+            console.log("----- TU CARRITO -----")
+
+            for (let i = 0; i < carrito.length; i++) {
+                let nombreCarta = carrito[i]
+                let indiceCarta = cartas.indexOf(nombreCarta)
+
+                if (indiceCarta != -1) {
+                    let subtotal = precios[indiceCarta] * cantidades[i]
+                    precioTotal += subtotal
+                    console.log(nombreCarta + " : " + cantidades[i] + " = " + subtotal.toFixed(2) + "€")
+                }
+            }
+
+            console.log("El precio total de tu compra es: " + precioTotal.toFixed(2) + "€")
+
+        } else if (opciones == "salir" || opciones == "fin") {
+            alert("ADIOS")
+            opciones = "fin"   
+        } else {
+            alert("Opción no válida")
+        }
+    }
+</script>

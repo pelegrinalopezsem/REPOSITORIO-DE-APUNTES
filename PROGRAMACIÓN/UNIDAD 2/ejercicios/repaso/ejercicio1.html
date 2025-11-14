@@ -1,0 +1,48 @@
+<script>
+    let puntuacion = 0
+    let puntuaciones = []
+    let opciones = ""
+    let numeroMasAlto = 0
+    let numeroMasBajo = 0
+    let totalPuntuaciones = 0
+    let promedioPuntuaciones = 0
+
+    for (let i = 1; i <= 10; i++) {
+        puntuacion = Number(prompt("Introduce la puntuacion de la partida " + i))
+        puntuaciones.push(puntuacion)
+    }
+    while (opciones != 5){
+        opciones = Number(prompt("1. MOSTRAR LA PUNTUACION MAS BAJA \n2. MOSTRAS LA PUNTUACION MAS BAJA \n3. CALCULAR LA PUNTUACION TOTAL \n4. CALCULAR LA MEDIA \n5. SALIR"))
+        if (opciones == 1){
+            for (let i = 0; i < puntuaciones.length; i++) {
+                if(i == 0){
+                    numeroMasAlto = puntuaciones[i]
+                }
+                if (numeroMasAlto < puntuaciones[i]){
+                    numeroMasAlto = puntuaciones[i]
+                }
+            }
+            console.log(numeroMasAlto)
+        } else if (opciones == 2){
+            for (let i = 0; i < puntuaciones.length; i++) {
+                if (i == 0){
+                    numeroMasBajo = puntuaciones[i]
+                }
+                if (numeroMasBajo > puntuaciones[i]){
+                    numeroMasBajo = puntuaciones[i]
+                }
+            }
+            console.log(numeroMasBajo)
+        } else if (opciones == 3){
+            for (let i = 0; i < puntuaciones.length; i++) {
+                totalPuntuaciones += puntuaciones[i]
+            }
+            console.log("El total de puntuaciones es: " + totalPuntuaciones)
+        } else if (opciones == 4){
+            promedioPuntuaciones = totalPuntuaciones / puntuaciones.length
+            console.log("La media de tu puntuacion es: " + promedioPuntuaciones)
+        } else {
+            alert("TE HAS SALIDO")
+        }
+    } 
+</script>

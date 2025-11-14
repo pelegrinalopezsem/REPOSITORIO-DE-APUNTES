@@ -1,0 +1,49 @@
+<script>
+    let jugadores = ["sem" , "alex", "miguel" , "antonio", "javier"]
+    let puntuaciones = [5, 6, 9, 4, 1]
+    let jugador = ""
+    let puntuacion = 0
+    let opciones = 0
+    let puntuacionMasAlta = 0
+    let puntuacionMasBaja = 0
+    let jugadorMejorPuntuacion = ""
+    let jugadorPeorPuntuacion = ""
+
+    while (opciones != 5){
+        opciones = Number(prompt("1. Añadir un nuevo jugador (eliminando al más antiguo). \n2. Mostrar jugadores y puntuaciones. \n3. Mostrar el jugador con mayor puntuación. \n4. Mostrar el jugador con menor puntuación. \n5. Salir"))
+        if (opciones == 1){
+            jugadores.pop()
+            puntuaciones.pop()
+            jugador = prompt("Introduce el nombre del nuevo jugador")
+            jugadores.push(jugador)
+            puntuacion = Number(prompt("Introduce la puntuacion del nuevo jugador"))
+            puntuaciones.push(puntuacion)
+        } else if (opciones == 2){
+            for (let i = 0; i < jugadores.length; i++) {
+                console.log(jugadores[i] + " : " + puntuaciones[i])
+            }
+        } else if (opciones == 3){
+            for (let i = 0; i < jugadores.length; i++) {
+                if (i == 0){
+                    puntuacionMasAlta = puntuaciones[i]
+                }
+                if (puntuacionMasAlta < puntuaciones[i]){
+                    jugadorMejorPuntuacion = jugadores[i]
+                }
+            }
+            console.log("El jugador con mejor puntuacion es " + jugadorMejorPuntuacion)
+        } else if (opciones == 4 ){
+            for (let i = 0; i < jugadores.length; i++) {
+                if (i == 0){
+                    puntuacionMasBaja = puntuaciones[i]
+                }
+                if (puntuacionMasBaja > puntuaciones[i]){
+                    jugadorPeorPuntuacion = jugadores[i]
+                }
+            }
+            console.log("El jugador con peor puntuacion es " + jugadorPeorPuntuacion)
+        } else {
+            alert("ADIOS")
+        }
+    }
+</script>
