@@ -1,0 +1,45 @@
+<script>
+    let palabraSecreta = prompt("Introduce una palabra para el AHORCADO").toLowerCase();
+    let guiones = [];
+    let cuerpo = [];
+    let fallo = 0;
+    let letrasAcertadas = 0;
+
+    // Poner un guion por cada letra que tiene la palabra para darle una 
+    for (let i = 0; i < palabraSecreta.length; i++) {
+        guiones.push("_");
+    }
+    while (fallo < 6 && letrasAcertadas < palabraSecreta.length) {
+    console.log("Palabra: " + guiones.join(" "));
+    let letra = prompt("Introduce una letra").toLowerCase();
+
+    let acierto = false;
+
+    // Recorremos la palabra para ver si la letra está
+    for (let i = 0; i < palabraSecreta.length; i++) {
+        if (palabraSecreta[i] == letra && guiones[i] == "_") {
+            guiones[i] = letra;
+            letrasAcertadas++;
+            acierto = true;
+        }
+    }
+
+    // Si no se acertó ninguna letra, aumentamos el fallo
+    if (acierto == false) {
+        fallo++;
+        if (fallo == 1) cuerpo.push(CABEZA);
+        if (fallo == 2) cuerpo.push(CUERPO);
+        if (fallo == 3) cuerpo.push(BRAZO);
+        if (fallo == 4) cuerpo.push(BRAZO);
+        if (fallo == 5) cuerpo.push(PIERNA);
+        if (fallo == 6) cuerpo.push(PIERNA);
+        console.log("Fallaste! " + cuerpo.join(''));
+    }
+}
+
+if (letrasAcertadas == palabraSecreta.length) {
+    console.log("🎉 ¡Ganaste! La palabra era: " + palabraSecreta);
+} else {
+    console.log("💀 ¡Perdiste! La palabra era: " + palabraSecreta);
+}
+</script>
