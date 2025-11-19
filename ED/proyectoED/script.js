@@ -5,7 +5,6 @@ let jugador1 = 0; let jugador2 = 0;
 function juego(usuario) {
     const elementos = ['piedra', 'papel', 'tijera'];
     const maquina = elementos[Math.floor(Math.random() * elementos.length)]; //a ver lo que elige la maquina
-
     // Muestro cosas en pantalla
     document.getElementById('user-choice').textContent = `Tu elección: ${usuario}`;
     document.getElementById('computer-choice').textContent = `Elección de la máquina: ${maquina}`;
