@@ -6,3 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Critical Roll</title>
 </head>
+
+<form>
+    <input type="text" name="nombre" placeholder="Escribe tu nombre" min="2" required><br>
+    <input type="text" name="apellido" placeholder="Escribe tu apellido" min="2" required><br>
+    <input type="email" name="correo" placeholder="correo@ejemplo.com" required><br>
+    <input type="text" name="telefono" pattern="\d{9}" placeholder="Debe tener 9 dígitos" required><br>
+    <input type="date" name="FechaDeNacimiento" placeholder="Pon tu fecha de nacimiento" required><br>
+    <select name="pais" multiple>
+        <option value="mx">México</option>
+        <option value="es">España</option>
+        <option value="ar">Argentina</option>
+    </select><br>
+    <input type="checkbox" name="Condiciones" placeholder="Aceptas los terminos y condiciones de la pagina web" required>Aceptas los terminos y condiciones de la pagina web<br>
+    <button type="submit">Enviar</button>
+</form>

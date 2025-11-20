@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de dados personalizados</title>
+</head>
+<form action="">
+    <select name="Tipo de dado">
+        <option value="mx">d4</option>
+        <option value="es">d6</option>
+        <option value="ar">d8</option>
+        <option value="ar">d10</option>
+        <option value="ar">d12</option>
+        <option value="ar">d20</option>
+    </select><br>
+    <input type="radio" name="material" value="Resina">Resina
+    <input type="radio" name="material" value="Metal">Metal
+    <input type="radio" name="material" value="Madera">Madera<br>
+
+    <input type="checkbox" name="Efectos" placeholder="Brillo" required>Brillo<br>
+    <input type="checkbox" name="Efectos" placeholder="Purpurina" required>Purpurina<br>
+    <input type="checkbox" name="Efectos" placeholder="Nucleo_luminoso" required>Nucleo luminoso<br>
+
+    <input type="number" name="cantidad" min="1" max="20" placeholder="Cantidad" required><br>
+
+    <textarea name="comentarios" rows="10" cols="200" placeholder="Escribe tu comentario"></textarea> <br>
+    <button type="submit">Enviar</button><br>
+    <button type="reset">Reiniciar</button>
+</form>
