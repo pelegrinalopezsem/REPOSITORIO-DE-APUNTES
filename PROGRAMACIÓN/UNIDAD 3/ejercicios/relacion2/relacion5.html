@@ -1,0 +1,23 @@
+<script>
+    function detectarPalabrasClave(texto, palabrasClave, conteoPalabrasClave) {
+        for (let i = 0; i < textoConComas.length; i++) {
+            if (textoConComas[i] == palabrasClave[0]) {
+                conteoPalabrasClave++
+            }
+            if (textoConComas[i] == palabrasClave[1]){
+                conteoPalabrasClave++
+            }
+            if (textoConComas[i] == palabrasClave[2]){
+                conteoPalabrasClave++
+            }
+        }
+        return conteoPalabrasClave
+    }
+
+    const texto = ("Me gusta programar en Python y Java").toLowerCase()
+    const palabrasClave = ["python", "java", "c++"];
+    let textoConComas = texto.split(" ")
+    let conteoPalabrasClave = 0
+    let resultado = detectarPalabrasClave(texto, palabrasClave, conteoPalabrasClave)
+    console.log ("Las palabras clave aparecen " + resultado + " veces.")
+</script>

@@ -1,0 +1,20 @@
+<script>
+    const nombre = ["Sem", "Luis", "Pepe", "Juanca", "Oscar"]
+    const apellido = ["Pelegrina", "López", "Jimenez", "Gomez", "Arroyo"]
+
+    function clientesEsperando(nombre, apellido) {
+        let numeroAleatorio = 0
+        let nombreCompleto = ""
+        let minutos = 0
+        let cola = []
+        for (let i = 0; i < nombre.length; i++) {
+            minutos = Math.floor(Math.random() * 10) + 1
+            numeroAleatorio = Math.floor(Math.random() * 4)
+            nombreCompleto = nombre[i], apellido[numeroAleatorio]
+            cola.push(nombreCompleto, minutos)
+        }
+        return cola
+    }
+    let resultado = clientesEsperando([nombre, apellido])
+    console.log (resultado)
+</script>

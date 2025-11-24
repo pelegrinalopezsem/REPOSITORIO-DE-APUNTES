@@ -1,0 +1,15 @@
+<script>
+    const texto = "Hola mundo mundo programacion es increible increible increible"
+    
+    function analizarTexto(texto) {
+    let estadisticas = []
+    let convertirEnArray = texto.split(" ")
+    let contadorPalabras = convertirEnArray.length
+    let contadorCaracteres = texto.length
+    let promedioLongitud = (contadorCaracteres / contadorPalabras)
+    estadisticas.push(contadorPalabras,contadorCaracteres,promedioLongitud)
+    return estadisticas
+    }
+    let resultado = analizarTexto(texto)
+    console.log (resultado)
+</script>

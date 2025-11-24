@@ -1,0 +1,16 @@
+<script>
+    function crearUsuario(nombre, apellido) {
+        let parteNombre = nombre.slice(0, 3)
+        let parteApellido = apellido.slice(0, 3)
+        let nombreUsuario = parteNombre + parteApellido
+        for (let i = 0; i < 3; i++) {
+            nombreUsuario += Math.floor(Math.random() * 10)
+        }
+        return nombreUsuario
+    }
+
+    let nombre = prompt("Introduce un nombre").toLowerCase()
+    let apellido = prompt("Introduce un apellido").toLowerCase()
+    let resultado = crearUsuario(nombre, apellido)
+    console.log (resultado)
+</script>
