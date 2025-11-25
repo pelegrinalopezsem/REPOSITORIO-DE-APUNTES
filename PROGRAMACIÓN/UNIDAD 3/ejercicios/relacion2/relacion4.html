@@ -1,14 +1,20 @@
 <script>
-    const candidatos = ["Juan", "Sofía", "Carlos"]
-    let numeroAleatorio = 0
-    function simularVotaciones(candidatos, numeroAleatorio) {
+    function simularVotaciones(candidatos, votosCandidato) {
         let votaciones = []
-        for (let i = 0; i < candidatos.length; i++) {
-        numeroAleatorio = Math.floor(Math.random() * 50) + 1
-        votaciones.push([candidatos[i],numeroAleatorio])
+        let maximoVotos = 100
+        for (let i = 0; i < candidatos.length-1; i++) {
+        votosCandidato = Math.floor(Math.random() * maximoVotos) 
+        maximoVotos -= votosCandidato
+        votaciones.push([candidatos[i],votosCandidato])
         }
+        maximoVotos -= votosCandidato
+        votaciones.push([candidatos[candidatos.length -1],maximoVotos])
         return votaciones
     }
-    let resultado = simularVotaciones(candidatos, numeroAleatorio)
+
+
+    const candidatos = ["Juan", "Sofía", "Carlos"]
+    let votosCandidato = 0
+    let resultado = simularVotaciones(candidatos, votosCandidato)
     console.log (resultado)
 </script>

@@ -1,0 +1,31 @@
+<script>
+    function repartirTareas(nombres, tareas) {
+        let divisionTareas = parseInt(tareas.length / nombres.length)
+        let tareaAleatorioa = 0
+        let tareasAsignadas = []
+        let numeroNombres = 0
+        for (let i = 0; i < nombres.length; i++) {
+            for (let j = 0; j < divisionTareas.length; j++) {
+                tareaAleatorioa = Math.floor(Math.random() * 10)
+                tareasAsignadas.push([nombres[i],tareas[tareaAleatorioa]])
+            }
+        }
+        return tareasAsignadas
+    }
+    const nombres = ["Ana", "Luis", "Pedro", "María"];
+    const tareas = [
+        "Lavar platos",
+        "Limpiar baño",
+        "Hacer compras",
+        "Barrer",
+        "Cortar césped",
+        "Cocinar",
+        "Organizar estantes",
+        "Limpiar ventanas",
+        "Poner la mesa",
+        "Recoger ropa"
+];
+
+let resultado = repartirTareas(nombres, tareas)
+console.log(resultado)
+</script>

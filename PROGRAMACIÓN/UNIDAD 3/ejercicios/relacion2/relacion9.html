@@ -1,25 +1,37 @@
 <script>
-    const DIASSEMANA = 7
-    let temporal = prompt("invierno \nverano")
-    function climaSemanal(DIASSEMANA,temporal ) {
+    function climaSemanal(DIASSEMANA,temporal) {
         let semana = []
         if (temporal == "invierno"){
             for (let i = 0; i < DIASSEMANA; i++) {
-                let temperaturaMinInvierno = Math.floor(Math.random() * 21) - 15
-                let temperaturaMaxInvierno = Math.floor(Math.random() * (15 - (-5) + 1)) + (-5)
-                let probabilidadDeLluvia = Math.floor(Math.random() * 100)
+                temperaturaMinInvierno = Math.floor(Math.random() * 21) - 15
+                temperaturaMaxInvierno = Math.floor(Math.random() * (15 - (-5) + 1)) + (-5)
+                probabilidadDeLluvia = Math.floor(Math.random() * 100)
                 while (temperaturaMaxInvierno < temperaturaMinInvierno){
                     temperaturaMaxInvierno = Math.floor(Math.random() * (15 - (-5) + 1)) + (-5)
                 }
                 semana.push([temperaturaMaxInvierno,temperaturaMinInvierno,probabilidadDeLluvia])
         }
         } else {
-            let temperaturaMaxVerano = Math.floor(Math.random() * (40 - 25 + 1)) + 25
-            let temperaturaMinVerano =  Math.floor(Math.random() * (25 - 15 + 1)) + 15
-            probabilidadDeLluvia = math.floor(random.random() * 50)
-            semana.push([temperaturaMaxInvierno,temperaturaMinInvierno,probabilidadDeLluvia])
+            for (let i = 0; i < DIASSEMANA; i++) {
+                temperaturaMaxVerano = Math.floor(Math.random() * (40 - 25 + 1)) + 25
+                temperaturaMinVerano =  Math.floor(Math.random() * (25 - 15 + 1)) + 15
+                probabilidadDeLluvia = Math.floor(Math.random() * 50)
+                semana.push([temperaturaMaxInvierno,temperaturaMinInvierno,probabilidadDeLluvia])
+            }
         } 
+        return semana
     }
-    let resultado = climaSemanal(DIASSEMANA,temporal )
+
+    const DIASSEMANA = 7
+    let temporal = prompt("invierno \nverano")
+    let temperaturaMinInvierno = 0
+    let temperaturaMaxInvierno = 0
+    let probabilidadDeLluvia = 0
+    if (temporal == "invierno") {
+        console.log("INVIERNO")
+    } else {
+        console.log("VERANO")
+    }
+    let resultado = climaSemanal(DIASSEMANA,temporal)
     console.log(resultado)
 </script>
