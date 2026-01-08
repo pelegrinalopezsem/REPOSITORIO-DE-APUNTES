@@ -20,6 +20,11 @@ public class ejercicio5 {
         System.out.print("Ingrese tu peso: ");
         int peso = scanner.nextInt();
 
-        System.out.println("En la luna pesarias: " + peso * PESOENLALUNA + " kg");
+//Se calcula multiplicacion
+        double pesoUsuarioEnLaLuna = peso * PESOENLALUNA;
+
+//Que muestre en la terminal
+        System.out.println("En la luna pesarias: " + pesoUsuarioEnLaLuna + " kg");
+        scanner.close();
     }
 }
