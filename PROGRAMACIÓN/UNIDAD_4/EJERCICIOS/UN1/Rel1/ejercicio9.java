@@ -9,31 +9,33 @@
 // console.log("A cada niño le tocan " + caramelosPorNinio + " caramelos y han sobrado " + restoDeCaramelos)
 
 package PROGRAMACIÓN.UNIDAD_4.EJERCICIOS.UN1.Rel1;
+
 import java.util.Scanner;
 
 public class ejercicio9 {
-public static void main(String[] args) {
-    
-    Scanner scanner = new Scanner(System.in);
+        public static void main(String[] args) {
 
-//Pedir al usuario que nos diga el numero de caramelos que tiene
-System.out.print("Ingrese el numero de caramelos: ");
-        int caramelos = scanner.nextInt();
+                Scanner scanner = new Scanner(System.in);
 
-//Pedir al usuario el numeros de niños que hay en total
-System.out.print("Ingrese el numero niños: ");
-        int numNiños = scanner.nextInt();
+                // Pedir al usuario que nos diga el numero de caramelos que tiene
+                System.out.print("Ingrese el numero de caramelos: ");
+                int caramelos = scanner.nextInt();
 
-//Hacemos la division para saber cuantos caramelos le toca ha cada niño
-double caramelosPorNinio = caramelos / numNiños ;
+                // Pedir al usuario el numeros de niños que hay en total
+                System.out.print("Ingrese el numero niños: ");
+                int numNiños = scanner.nextInt();
 
-//Calculamos el resto de caramelos
-int restoDeCaramelos = caramelos % numNiños;
+                // Hacemos la division para saber cuantos caramelos le toca ha cada niño
+                double caramelosPorNinio = caramelos / numNiños;
 
-//Mostramos en terminal
- System.out.println("A cada niño le tocan " + caramelosPorNinio + " caramelos y han sobrado " + restoDeCaramelos);
+                // Calculamos el resto de caramelos
+                int restoDeCaramelos = caramelos % numNiños;
 
-        // Cerrar el objeto Scanner
-        scanner.close();
-}
+                // Mostramos en terminal
+                System.out.println("A cada niño le tocan " + caramelosPorNinio + " caramelos y han sobrado "
+                                + restoDeCaramelos);
+
+                // Cerrar el objeto Scanner
+                scanner.close();
+        }
 }
