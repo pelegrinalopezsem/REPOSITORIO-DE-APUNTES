@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div > ul > li {
+    color: blueviolet;
+}
+
+div + p {
+    background-color: violet;
+}

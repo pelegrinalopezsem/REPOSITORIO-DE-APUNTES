@@ -1,0 +1,9 @@
+body {
+    background: linear-gradient(#e66465, #9198e5);
+    background-repeat: no-repeat ;
+}
+* {
+    color: azure;
+    margin: 100;
+    padding: 100;
+}
