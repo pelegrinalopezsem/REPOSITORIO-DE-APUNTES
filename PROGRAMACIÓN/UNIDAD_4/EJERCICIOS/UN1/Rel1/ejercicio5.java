@@ -12,19 +12,22 @@ package PROGRAMACIÓN.UNIDAD_4.EJERCICIOS.UN1.Rel1;
 import java.util.Scanner;
 
 public class ejercicio5 {
-    public static void main(String[] args) {
-        final double PESOENLALUNA = 0.165;
-        Scanner scanner = new Scanner(System.in);
+        public static void main(String[] args) {
+//Declaracion de variables
+                final double PESOENLALUNA = 0.165;
+                Scanner scanner = new Scanner(System.in);
+                double peso = 0;
+                double pesoUsuarioEnLaLuna = 0;
 
-//Se pide el peso del usuario
-        System.out.print("Ingrese tu peso: ");
-        int peso = scanner.nextInt();
+//Le pedimos al usuario su peso
+                System.out.print("Ingrese tu peso: ");
+                peso = scanner.nextDouble();
 
-//Se calcula multiplicacion
-        double pesoUsuarioEnLaLuna = peso * PESOENLALUNA;
+// Se calcula multiplicacion
+                pesoUsuarioEnLaLuna = peso * PESOENLALUNA;
 
-//Que muestre en la terminal
-        System.out.println("En la luna pesarias: " + pesoUsuarioEnLaLuna + " kg");
-        scanner.close();
-    }
+// Que muestre en la terminal
+                System.out.printf("En la luna pesarias: %.2f kg\n", pesoUsuarioEnLaLuna);
+                scanner.close();
+        }
 }
