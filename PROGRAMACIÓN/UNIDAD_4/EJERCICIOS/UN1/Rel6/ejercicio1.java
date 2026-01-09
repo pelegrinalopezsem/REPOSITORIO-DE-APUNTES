@@ -26,7 +26,7 @@ public class ejercicio1 {
             }
         sumaDeNotas += nota;
         alumno += UNO;
-                if (nota >= 5 || nota <= 10){
+                if (nota >= 5 && nota <= 10){
                     alumnosAprobados += UNO;
                 } else {
                     alumnosSuspensos += UNO;
@@ -37,5 +37,6 @@ public class ejercicio1 {
         promedio = sumaDeNotas / (alumno - 1);
         System.out.println("Hay " + alumnosAprobados + " alumnos aprovados y hay " + alumnosSuspensos + " alumnos suspensos");
         System.out.println("La calificacion media es: " + promedio);
+        scanner.close();
     }
 }
