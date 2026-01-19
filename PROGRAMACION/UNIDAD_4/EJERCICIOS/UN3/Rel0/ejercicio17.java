@@ -1,17 +1,22 @@
 package PROGRAMACION.UNIDAD_4.EJERCICIOS.UN3.Rel0;
 
-import java.util.ArrayList;
+
+import java.util.Scanner;
 
 public class ejercicio17 {
-    public static String revertirCadena(String cadenaTexto) {
-        String cadenaInvertida;
-        for (int i = cadenaTexto.length(); i >= 0; i--){
-            cadenaInvertida += cadenaTexto.charAt(i);
+    public static String revertirCadena(String cadena) {
+        String cadenaRevertida = "";
+        for (int i = cadena.length(); i > 0; i--) {
+            cadenaRevertida += cadena.charAt(i-1);
         }
-        return cadenaInvertida;
+        return cadenaRevertida;
     }
 
     public static void main(String[] args) {
-        String resultadoInvertirCadena = revertirCadena("Hola Buenas");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Introduce una cadena de texto: ");
+        String texto = scanner.nextLine();
+        scanner.close();
+        System.out.println("Cadena revertida: " + revertirCadena(texto));
     }
 }

@@ -1,21 +1,29 @@
 package PROGRAMACION.UNIDAD_4.EJERCICIOS.UN3.Rel0;
 
+import java.util.Scanner;
+
 public class ejercicio18 {
-    public static String contarVocalesEnCadena(String cadenaTexto) {
-        cadenaTexto = cadenaTexto.toLowerCase();
-        int contadorTotalVocales = 0;
+    public static int contarVocalesEnCadena(String cadenaTexto) {
+        int cantidadVocales = 0;
+        char caracterTexto;
         for (int i = 0; i < cadenaTexto.length(); i++) {
-            char letraCadena = cadenaTexto.charAt(i);
-            if (letraCadena == 'A' || letraCadena == 'E' || letraCadena == 'I' || letraCadena == 'O'
-                    || letraCadena == 'U') {
-                contadorTotalVocales++;
+            caracterTexto = cadenaTexto.charAt(i);
+            if (caracterTexto == 'a' || caracterTexto == 'e' || caracterTexto == 'i' || caracterTexto == 'o'
+                    || caracterTexto == 'u') {
+                cantidadVocales++;
             }
-            return contadorTotalVocales;
         }
+        return cantidadVocales;
     }
 
     public static void main(String[] args) {
-        String resultadoContarVocales = contarVocalesEnCadena("hola");
-        System.out.println("Hay " + resultadoContarVocales + "vocales");
+        Scanner scanner = new Scanner(System.in);
+        String cadenaTextoUsuario = "";
+
+        System.out.print("Introduce una cadena de texto: ");
+        cadenaTextoUsuario = scanner.nextLine().toLowerCase();
+        scanner.close();
+
+        System.out.println("El número de vocales es: " + contarVocalesEnCadena(cadenaTextoUsuario));
     }
 }

@@ -22,7 +22,7 @@ public class PT2 {
         boolean juegoPerdido = false;
         String jugadorActual = JUGADOR1;
         String mensajeFinPrograma = "Enhorabuena, ambos ganan";
-        int posicionSeleccionada;
+        int posicionSeleccionada = 0;
         int posicionDienteIntroducir = 0;
 
         // Creamos el tablero interno del juego
@@ -41,8 +41,12 @@ public class PT2 {
         }
         for (int i = 0; i < DIENTESNOPICADOS && !juegoPerdido; i++) {
             do {
-                System.out.print(jugadorActual + " elige: ");
-                posicionSeleccionada = scanner.nextInt();
+                try {
+                    System.out.print(jugadorActual + " elige: ");
+                    posicionSeleccionada = Integer.parseInt(scanner.nextLine());
+                } catch (NumberFormatException e) {
+                    System.out.println("Error: debes introducir un número entero válido.");
+                }
             } while (posicionSeleccionada < 0 ||
                     posicionSeleccionada >= NUMDIENTES ||
                     !tableroVisible.get(posicionSeleccionada).equals(DIENTE));
@@ -62,7 +66,7 @@ public class PT2 {
                 }
             }
         }
-        if (juegoPerdido == false){
+        if (juegoPerdido == false) {
             System.out.println(mensajeFinPrograma);
         }
         scanner.close();
