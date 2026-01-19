@@ -1,4 +1,4 @@
-package PROGRAMACIÓN.UNIDAD_4.EJERCICIOS.UN3.Rel0;
+package PROGRAMACION.UNIDAD_4.EJERCICIOS.UN3.Rel0;
 
 public class ejercicio10 {
     public static int calcularAreaTriangulo(int base, int altura) {

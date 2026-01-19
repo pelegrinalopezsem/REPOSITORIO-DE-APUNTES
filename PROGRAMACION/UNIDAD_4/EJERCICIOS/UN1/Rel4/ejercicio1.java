@@ -1,4 +1,4 @@
-package PROGRAMACIÓN.UNIDAD_4.EJERCICIOS.UN1.Rel4;
+package PROGRAMACION.UNIDAD_4.EJERCICIOS.UN1.Rel4;
 
 import java.util.Scanner;
 

@@ -12,7 +12,7 @@
 //         console.log("Este numero " + numero + " es mas grande que 20")
 //     }
 
-package PROGRAMACIÓN.UNIDAD_4.EJERCICIOS.UN1.Rel3;
+package PROGRAMACION.UNIDAD_4.EJERCICIOS.UN1.Rel3;
 
 import java.util.Scanner;
 

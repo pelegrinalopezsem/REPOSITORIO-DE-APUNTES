@@ -8,7 +8,7 @@
 
 // console.log("A cada niño le tocan " + caramelosPorNinio + " caramelos y han sobrado " + restoDeCaramelos)
 
-package PROGRAMACIÓN.UNIDAD_4.EJERCICIOS.UN1.Rel1;
+package PROGRAMACION.UNIDAD_4.EJERCICIOS.UN1.Rel1;
 
 import java.util.Scanner;
 

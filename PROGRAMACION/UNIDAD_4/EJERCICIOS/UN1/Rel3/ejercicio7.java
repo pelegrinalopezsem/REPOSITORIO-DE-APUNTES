@@ -30,7 +30,7 @@
 // }
 
 
-package PROGRAMACIÓN.UNIDAD_4.EJERCICIOS.UN1.Rel3;
+package PROGRAMACION.UNIDAD_4.EJERCICIOS.UN1.Rel3;
 
 import java.util.Scanner;
 
