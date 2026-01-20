@@ -11,7 +11,7 @@ public class ejercicio9 {
         for (int i = 0; i < 3; i++){
             System.out.println("Cliente atendido: " + cola.get(0));
             cola.remove(0);
-            System.out.println(cola);
+            System.out.println(String.join(", ", cola));
         }
     }
 }

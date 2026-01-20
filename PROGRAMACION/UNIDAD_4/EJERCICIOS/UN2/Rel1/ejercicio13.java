@@ -12,6 +12,6 @@ public class ejercicio13 {
             letrasInvertidas.add(letras.get(i));
         }
 
-        System.out.println(letrasInvertidas);
+        System.out.println(String.join(", ", letrasInvertidas));
     }
 }

@@ -8,10 +8,10 @@ public class ejercicio3 {
         colores.add("rojo");
         colores.add("verde");
         colores.add("azul");
-        System.out.println(colores);
+        System.out.println(String.join(", ", colores));
 //ejercicio 3
         int ultimoColor = colores.size() - 1;
         colores.remove(ultimoColor);
-        System.out.println(colores);
+        System.out.println(String.join(", ", colores));
     }
 }

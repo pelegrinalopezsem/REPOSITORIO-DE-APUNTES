@@ -8,6 +8,6 @@ public class ejercicio11 {
         ArrayList<String> nombres = new ArrayList<>(Arrays.asList("Ana" , "Pedro"));
         nombres.add("Laura");
         nombres.add(0, "Carlos");
-        System.out.println(nombres);
+        System.out.println(String.join(", ", nombres));
     }
 }

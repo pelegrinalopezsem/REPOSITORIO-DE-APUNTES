@@ -8,6 +8,6 @@ public class ejercicio4 {
         ArrayList<String> animales = new ArrayList<>(Arrays.asList("perro", "gato"));
         animales.add(0,"loro");
         animales.add(0,"tortuga");
-        System.out.println(animales);
+        System.out.println(String.join(", ", animales));
     }
 }

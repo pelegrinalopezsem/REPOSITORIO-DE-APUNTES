@@ -8,6 +8,6 @@ public class ejercicio2 {
         colores.add("rojo");
         colores.add("verde");
         colores.add("azul");
-        System.out.println(colores);
+        System.out.println(String.join(", ", colores));
     }
 }

@@ -8,6 +8,6 @@ public class ejercicio6 {
         ArrayList<String> frutas = new ArrayList<>(Arrays.asList("manzana", "banana", "naranja"));
         frutas.remove(0);
         frutas.add("fresas");
-        System.out.println(frutas);
+        System.out.println(String.join(", ", frutas));
     }
 }
