@@ -73,7 +73,7 @@ INSERT INTO venta VALUES
 -- Relación de ejercicios prácticos
 
 -- 1. Encuentra el número total de empleados por departamento.
-SELECT COUNT(*) AS total_empleados FROM empleado;
+SELECT COUNT(*) AS total_empleados GROUP BY departamento FROM empleado;
 
 -- 2. Calcula el salario promedio por ciudad, mostrando solo las ciudades con un salario promedio mayor a 4000.
 SELECT DISTINCT ciudad, AVG(salario) 
