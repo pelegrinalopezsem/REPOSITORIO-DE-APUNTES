@@ -4,6 +4,10 @@ package PROGRAMACION.UNIDAD_4.EJERCICIOS.UN3.Rel0;
 import java.util.Scanner;
 
 public class ejercicio17 {
+    /** Invierte la orientacion de la palabra.
+    * @param texto 
+    * @return
+    */
     public static String revertirCadena(String cadena) {
         String cadenaRevertida = "";
         for (int i = cadena.length(); i > 0; i--) {
