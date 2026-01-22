@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+
+}
+
+p {
+    font-family: "Gravitas One", serif;
+}
+.Cabecera{
+    display: flex;
+    justify-content: space-between;
+}
+.navegacion > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+
+}
+.Cabecera {
+    background-color: aqua;
+}
+
+.navegacion li {
+    margin: 10px;
+}
+
+.navegacion > ul > li > a:hover{
+color: aquamarine;
+}
+
+.navegacion > ul > li > a:active{
+    color: blue;
+}
