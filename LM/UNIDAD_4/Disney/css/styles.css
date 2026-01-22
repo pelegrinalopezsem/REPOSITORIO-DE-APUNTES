@@ -5,6 +5,8 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+}
+body {
     background-color: aliceblue;
 }
 
@@ -20,15 +22,19 @@ p {
 .Cabecera{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
 }
 .navegacion > ul {
     list-style: none;
     display: flex;
     flex-direction: row;
+    
 
 }
 .Cabecera {
     background-color: aqua;
+        overflow: hidden;
 }
 
 .navegacion li {
@@ -36,9 +42,21 @@ p {
 }
 
 .navegacion > ul > li > a:hover{
-color: aquamarine;
+color: antiquewhite;
 }
 
 .navegacion > ul > li > a:active{
     color: blue;
+}
+img {
+    background-size: cover;
+    background-position: center;
+}
+img:hover {
+    transform: scale(1.1);     
+    filter: brightness(0.5) sepia(1) hue-rotate(180deg);
+}
+
+.clase > h2 > div > img {
+    border-radius: 100px;
 }
