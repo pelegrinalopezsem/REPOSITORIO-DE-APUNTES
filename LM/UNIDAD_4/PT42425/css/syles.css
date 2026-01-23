@@ -1,0 +1,65 @@
+* {
+    color: rgb(221, 184, 255);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+/* REVISAR */
+header{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(141, 58, 158);
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul a:hover {
+    color: rgb(255, 0, 255);
+}
+
+.perfil img{
+    border-radius: 50%;
+    display: flex;
+}
+.perfil p {
+    background-color: rgb(242, 212, 245);
+    padding: 20px;
+}
+
+.publicacion {
+    border-radius: 20%;
+    background-color: rgb(128, 136, 255);
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.publicacion:hover {
+    background-color: blueviolet;
+}
+
+#usuario1 {
+    border: 2px solid rgb(204, 0, 255);
+}
+
+#usuario2 {
+    border: 2px solid rgb(0, 255, 234);
+}
+
+#usuario3 {
+    border: 2px solid rgb(72, 255, 0);
+}
+
+.publicacion button {
+    background-color: blue; color: white; border-radius: 5px;
+}
+
+.publicacion button:hover {
+    background-color: rgb(171, 255, 185);
+    transform: scale(1. 1);
+    transition: 0.2s;
+}
