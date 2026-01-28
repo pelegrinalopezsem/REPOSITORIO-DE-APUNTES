@@ -28,7 +28,6 @@ ul a:hover {
 }
 .perfil img{
     border-radius: 50%;
-    display: flex;
 }
 .perfil p {
     background-color: rgb(242, 212, 245);
