@@ -22,8 +22,9 @@ ul a:hover {
 }
 .perfil {
     display: flex;
-    justify-content:space-between;
-    padding: 10px;
+    flex-direction: column;
+    align-self: center;
+    padding: 20px;
 }
 .perfil img{
     border-radius: 50%;
