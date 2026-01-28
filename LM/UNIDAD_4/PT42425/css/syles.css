@@ -23,11 +23,15 @@ ul a:hover {
 .perfil {
     display: flex;
     flex-direction: column;
-    align-self: center;
+    align-items:center;
     padding: 20px;
 }
 .perfil img{
     border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
 }
 .perfil p {
     background-color: rgb(242, 212, 245);
