@@ -20,46 +20,66 @@ a {
 ul a:hover {
     color: rgb(255, 0, 255);
 }
-
+.perfil {
+    display: flex;
+    justify-content:space-between;
+    padding: 10px;
+}
 .perfil img{
     border-radius: 50%;
     display: flex;
 }
 .perfil p {
     background-color: rgb(242, 212, 245);
-    padding: 20px;
 }
 
 .publicacion {
     border-radius: 20%;
-    background-color: rgb(128, 136, 255);
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    gap: 16px;
+
 }
 
-.publicacion:hover {
-    background-color: blueviolet;
-}
 
 #usuario1 {
     border: 2px solid rgb(204, 0, 255);
+    background-color: rgb(254, 210, 255);
 }
 
 #usuario2 {
     border: 2px solid rgb(0, 255, 234);
+    background-color: rgb(148, 148, 250);
 }
 
 #usuario3 {
     border: 2px solid rgb(72, 255, 0);
+    background-color: rgb(180, 255, 170);
+}
+
+#usuario1:hover {
+    background-color: rgb(166, 81, 245);
+}
+
+#usuario2:hover {
+    background-color: rgb(142, 236, 215);
+}
+
+#usuario3:hover {
+    background-color: rgb(225, 252, 156);
 }
 
 .publicacion button {
-    background-color: blue; color: white; border-radius: 5px;
+    background-color: rgb(251, 155, 213); color: white; border-radius: 5px;
 }
 
 .publicacion button:hover {
-    background-color: rgb(171, 255, 185);
+    background-color: rgb(255, 0, 234);
     transform: scale(1. 1);
     transition: 0.2s;
+}
+
+.otros_usuarios {
+    display: flex;
+    justify-content: space-between;
 }
