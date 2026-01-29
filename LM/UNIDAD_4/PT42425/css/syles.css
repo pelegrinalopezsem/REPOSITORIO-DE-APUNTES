@@ -7,18 +7,26 @@
 /* REVISAR */
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content:space-between;
     background-color: rgb(141, 58, 158);
+    text-decoration: none;
+}
+
+header > h1{
+    font-size: 75px;
+    font-weight: bold;
+}
+
+.navegacion {
     list-style: none;
     text-decoration: none;
 }
-
-a {
-    text-decoration: none;
-}
-
-ul a:hover {
+.navegacion a:hover {
     color: rgb(255, 0, 255);
+    font-weight: bold;
+}
+.navegacion a {
+    text-decoration: none;
 }
 .perfil {
     display: flex;
@@ -38,6 +46,7 @@ ul a:hover {
 }
 
 .publicacion {
+    padding: 10px;
     border-radius: 20%;
     display: flex;
     flex-direction: column;
@@ -47,16 +56,19 @@ ul a:hover {
 
 
 #usuario1 {
+    flex: 1, 1, 200px;
     border: 2px solid rgb(204, 0, 255);
     background-color: rgb(254, 210, 255);
 }
 
 #usuario2 {
+    flex: 1, 1, 200px;
     border: 2px solid rgb(0, 255, 234);
     background-color: rgb(148, 148, 250);
 }
 
 #usuario3 {
+    flex: 1, 1, 200px;
     border: 2px solid rgb(72, 255, 0);
     background-color: rgb(180, 255, 170);
 }
@@ -86,4 +98,27 @@ ul a:hover {
 .otros_usuarios {
     display: flex;
     justify-content: space-between;
+        padding: 10px;
+    margin: 10px;
+}
+
+#usuario4 {
+
+    border: 5px solid #f707ff;
+    background-color: rgb(255, 166, 166);
+}
+
+#usuario5 {
+    border: 5px solid #ff0000;
+    background-color: rgb(224, 111, 111);
+}
+
+#usuario4 > img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.5) sepia(1) hue-rotate(180deg);
+}
+
+#usuario5 > img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.5) sepia(1) hue-rotate(180deg);
 }
