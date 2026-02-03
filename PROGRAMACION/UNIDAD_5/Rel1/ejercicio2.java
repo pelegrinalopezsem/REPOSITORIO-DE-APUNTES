@@ -15,11 +15,13 @@ public class ejercicio2 {
             if (opcion == 1) {
                 System.out.println("¿Cuanto dinero quieres ingresar?");
                 ingresar = scanner.nextDouble();
-                System.out.println(cuenta.ingresarSaldo(ingresar));
+                cuenta.ingresarSaldo(ingresar);
+                System.out.println(cuenta.saldo);
             } else if (opcion == 2) {
                 System.out.println("¿Cuanto dinero quieres retirar?");
                 retirar = scanner.nextDouble();
-                System.out.println(cuenta.retirarSaldo(retirar));
+                cuenta.retirarSaldo(retirar);
+                System.out.println(cuenta.saldo);
             }
         }
         scanner.close();
@@ -35,17 +37,18 @@ class CuentaBancaria {
         this.saldo = saldo;
     }
 
-    double ingresarSaldo(double ingresar) {
-            this.saldo += ingresar;
-        return saldo;
+    void ingresarSaldo(double cantidad) {
+            this.saldo += cantidad;
     }
 
-    double retirarSaldo(double retirar) {
-        this.saldo -= retirar;
-        if (this.saldo < 0) {
-            saldo += retirar;
-            System.out.println("INSUFICIENTE SALDO PARA HACER ESTA OPERACION");
+    void retirarSaldo(double cantidad) {
+        if (saldo - cantidad >= 0) {
+            this.saldo -= cantidad;
+        } else {
+            imprimirMensaje("INSUFICIENTE SALDO PARA HACER ESTA OPERACION");
         }
-        return saldo;
+    }
+    void imprimirMensaje (String mensaje){
+        System.out.println(mensaje);
     }
 }

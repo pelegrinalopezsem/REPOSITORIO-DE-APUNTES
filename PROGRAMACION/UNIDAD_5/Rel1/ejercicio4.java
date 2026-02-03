@@ -9,10 +9,10 @@ public class ejercicio4 {
         int velocidad;
         Clase coche = new Clase("bmw", "c4", 100);
         while (opcion != 3) {
-            System.out.println("1.ACELERAR\n2.FRENAR\n3.FIN");
+            coche.imprimirMensaje("1.ACELERAR\n2.FRENAR\n3.FIN");
             opcion = scanner.nextInt();
             if (opcion == 1) {
-                System.out.println("INTRODUCE LA VELOCIDAD QUE QUIERES ACELERAR");
+                coche.imprimirMensaje("INTRODUCE LA VELOCIDAD QUE QUIERES ACELERAR");
                 velocidad = scanner.nextInt();
                 System.out.println(coche.acelerar(velocidad));
             } else if (opcion == 2) {
@@ -49,5 +49,9 @@ class Clase {
             this.velocidadActual += velocidad;
         }
         return velocidadActual;
+    }
+
+    void imprimirMensaje(String mensaje) {
+        System.out.println(mensaje);
     }
 }

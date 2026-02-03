@@ -20,10 +20,13 @@ class Alumno {
         boolean aprueba = false;
         if (calificacion >= 6){
             aprueba = true;
-            System.out.println("HAS APROBADO CON UN " + calificacion + " LA MATERIA " + materia);
+            imprimirMensaje("HAS APROBADO CON UN " + calificacion + " LA MATERIA " + materia);
         } else {
-            System.out.println("HAS SUSPENDIDO CON UN " + calificacion + " LA MATERIA " + materia);
+            imprimirMensaje("HAS SUSPENDIDO CON UN " + calificacion + " LA MATERIA " + materia);
         }
         return aprueba;
+    }
+        void imprimirMensaje (String mensaje){
+        System.out.println(mensaje);
     }
 }
