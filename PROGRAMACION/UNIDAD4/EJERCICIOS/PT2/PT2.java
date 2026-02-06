@@ -1,4 +1,4 @@
-package PROGRAMACION.UNIDAD_4.EJERCICIOS.PT2;
+package PROGRAMACION.UNIDAD4.EJERCICIOS.PT2;
 
 import java.util.Scanner;
 import java.util.ArrayList;

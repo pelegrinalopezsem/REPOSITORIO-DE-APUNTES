@@ -1,4 +1,4 @@
-package PROGRAMACION.UNIDAD_4.EJERCICIOS.REPASO;
+package PROGRAMACION.UNIDAD4.EJERCICIOS.REPASO;
 
 import java.util.ArrayList;
 import java.util.Arrays;
