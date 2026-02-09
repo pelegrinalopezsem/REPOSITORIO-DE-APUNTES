@@ -18,8 +18,7 @@
 // console.log ("La segunda cifra es " + segundaCifra)
 
 
-package PROGRAMACION.UNIDAD_4.EJERCICIOS.UN1.Rel3;
-
+package PROGRAMACION.UNIDAD4.EJERCICIOS.UN1.Rel3;
 import java.util.Scanner;
 
 public class ejercicio9 {

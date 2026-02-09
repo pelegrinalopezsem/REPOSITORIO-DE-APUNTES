@@ -1,4 +1,4 @@
-package PROGRAMACION.UNIDAD_4.EJERCICIOS.UN3.Rel0;
+package PROGRAMACION.UNIDAD4.EJERCICIOS.UN3.Rel0;
 
 public class ejercicio19 {
     public static String capitalizarPrimeraLetra(String cadena) {

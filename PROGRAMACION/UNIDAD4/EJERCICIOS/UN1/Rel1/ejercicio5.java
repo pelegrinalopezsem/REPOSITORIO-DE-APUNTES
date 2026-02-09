@@ -7,7 +7,7 @@
 
 // console.log("En la Luna pesarías: " + pesoEnLaLuna + "kg")
 
-package PROGRAMACION.UNIDAD_4.EJERCICIOS.UN1.Rel1;
+package PROGRAMACION.UNIDAD4.EJERCICIOS.UN1.Rel1;
 
 import java.util.Scanner;
 
