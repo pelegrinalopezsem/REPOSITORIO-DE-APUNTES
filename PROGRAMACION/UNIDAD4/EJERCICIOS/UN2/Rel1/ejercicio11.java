@@ -1,5 +1,4 @@
-package PROGRAMACION.UNIDAD_4.EJERCICIOS.UN2.Rel1;
-
+package PROGRAMACION.UNIDAD4.EJERCICIOS.UN2.Rel1;
 import java.util.ArrayList;
 import java.util.Arrays;
 
