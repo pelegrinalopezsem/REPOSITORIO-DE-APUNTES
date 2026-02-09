@@ -56,11 +56,12 @@ class Reloj {
 
     void sumarMinutos(int minutos) {
         int totalminutos = minuto + minutos;
-        if (minuto + minutos >= 60) {
-            minuto = 0;
-            minuto += totalminutos - 60;
+        while (totalminutos > 60) {
+            minuto = totalminutos - 60;
             hora += 1;
-        } else {
+            totalminutos -= 60;
+        }
+        if (totalminutos <= 60) {
             minuto += minutos;
         }
     }
@@ -68,23 +69,18 @@ class Reloj {
     void restarMinutos(int minutos) {
         if (minuto < minutos) {
             hora--;
-            minuto += 60;
+            minuto += 60 - minutos;
+            
+        } else {
+            minuto -= minutos;
         }
-        minuto -= minutos;
     }
 
     void sumarSegundos(int segundos) {
-        int totalsegundos = segundos + segundo;
+        int totalsegundos = segundo + segundos;
         if (totalsegundos >= 60) {
-            segundo = 0;
-            segundo += totalsegundos - 60;
-            if (minuto + 1 >= 60) {
-                minuto = 0;
-                minuto += (minuto + 1) - 60;
-                hora += 1;
-            } else {
-                minuto += 1;
-            }
+            segundo = totalsegundos - 60;
+            sumarMinutos(1);
         } else {
             segundo += segundos;
         }
@@ -93,8 +89,8 @@ class Reloj {
     void restarSegundos(int segundos) {
         int totalsegundos = segundo - segundos;
         if (totalsegundos < 0) {
-            minuto -= 1;
-            segundo = 60 + totalsegundos;
+            restarMinutos(1);
+            segundo += 60 + totalsegundos;
         } else {
             segundo = totalsegundos;
         }
@@ -102,6 +98,20 @@ class Reloj {
 
     @Override
     public String toString() {
-        return hora + ":" + minuto + ":" + segundo;
+        String mensaje = "";
+
+        if (hora < 10) {
+            mensaje += "0";
+        }
+        mensaje += hora + ":";
+        if (minuto < 10) {
+            mensaje += "0";
+        }
+        mensaje += minuto + ":";
+        if (segundo < 10) {
+            mensaje += "0";
+        }
+        mensaje += segundo;
+        return mensaje;
     }
 }
