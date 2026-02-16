@@ -1,10 +1,7 @@
 package PROGRAMACION.UNIDAD4;
 
-import java.util.Scanner;
-
-import javax.print.DocFlavor.STRING;
-
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PT {
     public static void main(String[] args) {
@@ -68,7 +65,6 @@ public class PT {
 
         do {
             mostrarOpciones();
-            ;
             opcion = leerNumeroEntero("Elige una opcion:", sc);
 
             if (opcion >= min && opcion <= max) {
