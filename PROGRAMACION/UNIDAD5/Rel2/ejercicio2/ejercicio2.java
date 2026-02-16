@@ -1,4 +1,4 @@
-package PROGRAMACION.UNIDAD_5.Rel2.ejercicio2;
+package PROGRAMACION.UNIDAD5.Rel2.ejercicio2;
 
 public class ejercicio2 {
     public static void main(String[] args) {

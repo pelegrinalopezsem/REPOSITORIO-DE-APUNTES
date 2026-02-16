@@ -1,6 +1,5 @@
-package PROGRAMACION.UNIDAD_5.Rel1;
+package PROGRAMACION.UNIDAD5.Rel1;
 
-import java.nio.file.OpenOption;
 import java.util.Scanner;
 
 public class ejercicio8 {

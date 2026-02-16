@@ -1,4 +1,4 @@
-package PROGRAMACION.UNIDAD_5.Rel2.ejercicio1;
+package PROGRAMACION.UNIDAD5.Rel2.ejercicio1;
 
 //Crea una clase Estudiante con atributos nombre, edad y número de matrícula. 
 // Implementa los métodos get y set para cada atributo, así como el método toString()

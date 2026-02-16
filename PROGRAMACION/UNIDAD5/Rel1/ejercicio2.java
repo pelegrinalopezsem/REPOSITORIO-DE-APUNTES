@@ -1,4 +1,4 @@
-package PROGRAMACION.UNIDAD_5.Rel1;
+package PROGRAMACION.UNIDAD5.Rel1;
 
 import java.util.Scanner;
 

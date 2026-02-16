@@ -1,4 +1,4 @@
-package PROGRAMACION.UNIDAD_5.Rel2.ejercicio1;
+package PROGRAMACION.UNIDAD5.Rel2.ejercicio1;
 
 public class Estudiante {
 
