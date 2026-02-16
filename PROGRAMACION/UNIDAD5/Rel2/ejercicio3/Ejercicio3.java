@@ -10,5 +10,7 @@ public class Ejercicio3 {
         System.out.println(champuHS);
         champuHS.setNombre("don calvo");
         System.out.println(champuHS.getNombre());
-    }
+        System.out.println(miSuper.buscarProducto("P-0"));
+        miSuper.venderProducto("P-0", 5);
+}
 }
