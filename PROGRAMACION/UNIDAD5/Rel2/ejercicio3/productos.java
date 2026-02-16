@@ -1,6 +1,6 @@
 package PROGRAMACION.UNIDAD5.Rel2.ejercicio3;
 
-public class producto {
+public class productos {
     private static int numeroProductos = 0;
     private String id;
     private String nombre;
@@ -8,7 +8,7 @@ public class producto {
     private double precio;
     private int cantidadEnStock;
 
-    producto(String nombre, String descripcion, double precio, int cantidadEnStock) {
+    productos(String nombre, String descripcion, double precio, int cantidadEnStock) {
         setId();
         this.nombre = nombre;
         this.descripcion = descripcion;
