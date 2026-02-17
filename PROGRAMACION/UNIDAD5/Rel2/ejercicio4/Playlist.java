@@ -12,6 +12,11 @@ public class Playlist {
         canciones.add(cancion);
     }
     //MOSTRAR CANCIONES
+    public void mostrarCanciones() {
+        for (cancion c : canciones) {
+            System.out.println(c)  ;
+        }
+    }
     @Override
     public String toString() {
         String cancion = "";

@@ -5,7 +5,9 @@ public class ejercicio4 {
     public static void main(String[] args) {
         Playlist canciones = new Playlist();
         cancion TEVOTE = new cancion("Te Vote", "Ozuna", 300);
+        cancion LOCO = new cancion("LOCO", "Beele", 330);
         canciones.agregarCancion(TEVOTE);
-        System.out.println(canciones);
+        canciones.agregarCancion(LOCO);
+        canciones.mostrarCanciones();
     }
 }
