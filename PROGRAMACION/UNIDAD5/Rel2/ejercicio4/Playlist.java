@@ -17,6 +17,13 @@ public class Playlist {
             System.out.println(c)  ;
         }
     }
+    public void tiempoTotalPlaylist() {
+    int total = 0;
+    for (cancion c : canciones) {
+        total += c.getDuracion();
+    }
+    System.out.println("Tiempo total de la playlist: " + total + " segundos");
+}
     @Override
     public String toString() {
         String cancion = "";

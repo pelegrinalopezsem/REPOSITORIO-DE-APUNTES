@@ -9,5 +9,6 @@ public class ejercicio4 {
         canciones.agregarCancion(TEVOTE);
         canciones.agregarCancion(LOCO);
         canciones.mostrarCanciones();
+        canciones.tiempoTotalPlaylist();
     }
 }
