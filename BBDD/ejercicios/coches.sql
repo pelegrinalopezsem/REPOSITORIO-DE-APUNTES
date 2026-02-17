@@ -226,3 +226,27 @@ GROUP BY provincia, marca
 ORDER BY contador_coches DESC
 LIMIT 1;
 
+-- 13.Promedio de edad de dueños por marca de coche
+SELECT coches.marca , AVG(DATEDIFF(CURDATE(), fecha_nacimiento) / 365) AS promedio_edad
+FROM personas
+LEFT JOIN coches
+ON personas.id = coches.id_dueño
+GROUP BY coches.marca;
+
+-- 14.Total de ingresos de dueños por color de coche
+SELECT coches.color, SUM(personas.ingresos_anuales) AS 
+FROM personas
+JOIN coches
+ON personas.id = coches.id_dueño
+GROUP BY coches.color;
+
+-- 15.Municipios con más coches
+SELECT personas.municipio, COUNT(coches.id_dueño) AS total_coches
+FROM personas
+JOIN coches
+ON personas.id = coches.id_dueño
+GROUP BY personas.municipio;
+
+-- 16. Padres e hijos y sus coches
+-- 17. Parejas con algún hijo y sus coches
+-- 18. Personas de la misma familia con más de dos coches
