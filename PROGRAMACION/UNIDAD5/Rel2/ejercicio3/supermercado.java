@@ -9,10 +9,17 @@ public class supermercado {
         this.productos = new ArrayList<>();
     }
     
+/**
+ * 
+ * @param producto producto a agregar al supermercado
+ */
 //AGREGAR PRODUCTO
     public void agregarProducto(productos producto) { 
         productos.add(producto);
     }
+/** 
+ * @param producto
+ */
 //VENDER PRODUCTO
     public void venderProducto(productos producto){
         int cantidadComprar = 1;
@@ -28,6 +35,9 @@ public class supermercado {
             }
         }
     }
+/** 
+ * @return String
+ */
 //MOSTRAR INVENTARIO
     @Override
     public String toString() {

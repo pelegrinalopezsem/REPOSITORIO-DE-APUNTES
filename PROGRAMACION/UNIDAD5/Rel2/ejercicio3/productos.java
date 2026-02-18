@@ -1,5 +1,14 @@
 package PROGRAMACION.UNIDAD5.Rel2.ejercicio3;
-
+/**
+ * Representa un producto con su nombre, descripción, precio y cantidad en stock.
+ *
+ * Esta clase proporciona métodos para obtener y modificar los atributos del producto,
+ * así como una representación en texto del producto.
+ *
+ * @author Alumno
+ * @version 1.0
+ * @since 1.0
+ */
 public class productos {
     private static int numeroProductos = 0;
     private String id;
@@ -7,7 +16,13 @@ public class productos {
     private String descripcion;
     private double precio;
     private int cantidadEnStock;
-
+/**
+ * 
+ * @param nombre
+ * @param descripcion
+ * @param precio
+ * @param cantidadEnStock
+ */
     productos(String nombre, String descripcion, double precio, int cantidadEnStock) {
         setId();
         this.nombre = nombre;
@@ -16,12 +31,17 @@ public class productos {
         setCantidadEnStock(cantidadEnStock);
         
     }
-
+/**
+ * @return
+ */
     @Override
     public String toString() {
         return nombre + ": " + descripcion + " PRECIO : " + precio + ". Unidades en Stock: " + cantidadEnStock;
     }
-
+/**
+ * 
+ * @return
+ */
     public String getId() {
         return id;
     }

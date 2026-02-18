@@ -3,6 +3,9 @@ package PROGRAMACION.UNIDAD5.Rel1;
 import java.util.Scanner;
 
 public class ejercicio4 {
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcion = 0;

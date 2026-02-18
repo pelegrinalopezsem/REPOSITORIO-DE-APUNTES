@@ -1,7 +1,8 @@
 package PROGRAMACION.UNIDAD5.Rel2.ejercicio5;
 
 public class ejercicio5 {
-    public static void main(String[] args) {
+
+        public static void main(String[] args) {
         Cine Kineapolis = new Cine();
         Pelicula MAGIA = new Pelicula("HARRY", "MAGO TONTO", "EL PEPE", 1000);
         Pelicula Terror = new Pelicula("HARRY", "MAGO TONTO", "EL PEPE", 200);
