@@ -1,7 +1,6 @@
-let botones = document.querySelectorAll(".boton");
-for (const boton of botones) {
-    boton.style.backgroundColor = "#FFB7B2"; 
-}
+let botones = document.querySelector(".boton");
+    botones.style.backgroundColor = "#FFB7B2"; 
+
 
 const boton = document.querySelector("#cambiarEstilo")
 boton.addEventListener("click", function () {

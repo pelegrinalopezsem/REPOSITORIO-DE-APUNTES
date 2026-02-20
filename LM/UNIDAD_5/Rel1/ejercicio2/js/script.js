@@ -1,6 +1,6 @@
 let listados = document.getElementsByTagName("li")
 for (const listado of listados) {
-    listado.style.border = "2px solid black";
+    listado.style.border = "2px solid orange";
 }
 
 const boton = document.querySelector("#marcarFrutas")

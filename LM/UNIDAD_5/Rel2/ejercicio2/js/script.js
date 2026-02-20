@@ -1,2 +1,2 @@
-const fotos = document.getElementById("imagen").src = "imagen2.png";
+document.getElementById("imagen").src = "imagen2.png";
 

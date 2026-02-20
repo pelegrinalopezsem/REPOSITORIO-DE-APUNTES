@@ -1,6 +1,9 @@
-const noticias = document.querySelectorAll(".noticia")
-    for (const noticia of noticias) {
-        noticia.style.backgroundColor = "lightgray";
-        noticia.style.color = "blue";
-        noticia.textContent = "🔥" + noticia.textContent;
+const noticias = document.querySelectorAll(".noticia");
+for (let i = 0; i < noticias.length; i++) {
+    if (i % 2 == 0) {
+        noticias[i].style.backgroundColor = "lightgray";
+    } else {
+        noticias[i].style.color = "blue";
     }
+    noticias[i].textContent = "🔥" + noticias[i].textContent;
+}

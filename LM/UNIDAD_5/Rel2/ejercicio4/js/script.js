@@ -1,8 +1,9 @@
-let precios = document.querySelectorAll(".precio");
+let precios = document.getElementsByClassName("precio");
+let valor;
 
 for (const precio of precios) {
     precio.style.fontWeight = "bold";
-    let valor = parseFloat(precio.textContent.trim());
+    valor = parseFloat(precio.textContent.trim());
     if (valor > 50) {
         precio.style.color = "red";
     }
