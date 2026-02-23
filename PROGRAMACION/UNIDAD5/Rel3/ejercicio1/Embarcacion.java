@@ -7,9 +7,10 @@ public class Embarcacion {
     private String tipo;
     private String propietario;
     private int anioFabricacion;
-    private  double valorEstimado;
+    private double valorEstimado;
 
-    public Embarcacion (String matricula,String nombre,double eslora,String tipo,String propietario,int anioFabricacion,double valorEstimado){
+    public Embarcacion(String matricula, String nombre, double eslora, String tipo, String propietario,
+            int anioFabricacion, double valorEstimado) {
         this.matricula = matricula;
         this.nombre = nombre;
         this.eslora = eslora;
@@ -18,54 +19,68 @@ public class Embarcacion {
         this.anioFabricacion = anioFabricacion;
         this.valorEstimado = valorEstimado;
     }
-    public String getMatricula(){
+
+    public String getMatricula() {
         return matricula;
     }
-    public void setMatricula(String matricula){
-        if (matricula != null && !matricula.isEmpty()){
+
+    public void setMatricula(String matricula) {
+        if (matricula != null && !matricula.isEmpty()) {
             this.matricula = matricula;
         }
     }
-    public String getNombre(){
+
+    public String getNombre() {
         return nombre;
     }
-    public void setNombre(String nombre){
+
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public double  getEslora(){
+
+    public double getEslora() {
         return eslora;
     }
-    public void setEslora(double eslora){
+
+    public void setEslora(double eslora) {
         if (eslora > 0) {
             this.eslora = eslora;
         }
     }
-    public String getTipo(){
+
+    public String getTipo() {
         return tipo;
     }
-    public void setTipo(String tipo){
-        if (tipo.equals("Velero") || tipo.equals("Lancha") || tipo.equals("Yate") || tipo.equals("Catamarán") || tipo.equals("Moto de agua")) {
+
+    public void setTipo(String tipo) {
+        if (tipo.equals("Velero") || tipo.equals("Lancha") || tipo.equals("Yate") || tipo.equals("Catamarán")|| tipo.equals("Moto de agua")) {
             this.tipo = tipo;
         }
     }
+
     public String getPropietario() {
         return propietario;
     }
-    public void setPropietario(String propietario){
+
+    public void setPropietario(String propietario) {
         this.propietario = propietario;
     }
-    public int anioFabricacion(){
+
+    public int getAnioFabricacion() {
         return anioFabricacion;
     }
-    public void setAnioFabreicacion(int anioFabricacion){
-        if(anioFabricacion >= 1950 && anioFabricacion <= 2026){
+
+    public void setAnioFabreicacion(int anioFabricacion) {
+        if (anioFabricacion >= 1950 && anioFabricacion <= 2026) {
             this.anioFabricacion = anioFabricacion;
         }
     }
-    public double getValorEstimado(){
+
+    public double getValorEstimado() {
         return valorEstimado;
     }
-    public void setValorEstimado(double valorEstimado){
+
+    public void setValorEstimado(double valorEstimado) {
         if (valorEstimado < 0) {
             valorEstimado = 0;
         }
