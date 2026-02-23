@@ -6,8 +6,9 @@ public class Amarre {
     private double longitudMaxima;
     private boolean ocupado;
     public double precioDia;
+    public String tipoAmarre;
 
-    public Amarre(int numero, double longitudMaxima, boolean ocupado, double precioDia) {
+    public Amarre(int numero, double longitudMaxima, boolean ocupado, double precioDia, String tipoAmarre) {
         this.numero = numero;
         this.longitudMaxima = longitudMaxima;
         this.ocupado = ocupado;
@@ -58,5 +59,17 @@ public class Amarre {
             precioDia = 120 + (3.5 * longitudMaxima);
         }
         return precioDia;
+    }
+
+    public String tipoAgarre() {
+        return tipoAmarre;
+    }
+
+    public void setTipoAmarre(String tipoAmarre) {
+        if (tipoAmarre.equals("Normal") || tipoAmarre.equals("Premium") || tipoAmarre.equals("Megayate")) {
+            this.tipoAmarre = tipoAmarre;
+        } else {
+            System.out.println("Amarre no valido");
+        }
     }
 }

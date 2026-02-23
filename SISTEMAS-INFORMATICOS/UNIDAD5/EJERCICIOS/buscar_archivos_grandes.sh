@@ -1,3 +1,3 @@
 buscar_archivos_grandes(){
-    peso_archivos = ls
+    $peso_archivos = 
 }

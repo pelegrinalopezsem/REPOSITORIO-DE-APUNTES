@@ -7,7 +7,7 @@ sumatorio() {
     # done
     # echo $resultado
 
-    echo $(($1 * ($1 + 1)) / 2)
+    echo $(($1 * ($1 + 1) / 2))
 
 }
 
