@@ -6,6 +6,9 @@ cambiar_permisos(){
     echo "Formato de permisos inválido"
     exit 1
     fi
+    if [ ! -s "$2" ]; then
+    echo "Formato no valido o vacio"
+    fi
     chmod $1 $2
     echo 
 }
