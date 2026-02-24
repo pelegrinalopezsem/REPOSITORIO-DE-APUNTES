@@ -8,4 +8,4 @@ crear_directorio(){
 }
 
 ruta="./mi_carpeta"
-crear_directorio
+crear_directorio 
