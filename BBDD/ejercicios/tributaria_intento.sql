@@ -75,11 +75,15 @@ LEFT JOIN declaraciones d
 ON c.id_contribuyente = d.id_contribuyente
 GROUP BY c.nombre;
 -- 5. Obtener contribuyentes sin declaraciones
-SELECT c.nombre, COUNT(d.id_contribuyente)
+SELECT c.nombre
 FROM contribuyentes c
-LEFT JOIN declaraciones d
+LEFT JOIN declaraciones d 
 ON c.id_contribuyente = d.id_contribuyente
-GROUP BY c.nombre
-HAVING d.id_contribuyente IS NULL;
+GROUP BY c.id_contribuyente, c.nombre
+HAVING COUNT(d.id_declaracion) = 0;
 
 -- 6. Diferencias a pagar o devolver por contribuyente
+SELECT c.nombre, d.diferencia
+FROM contribuyentes c
+LEFT JOIN declaraciones d
+ON c.id_contribuyente = d.id_contribuyente;
