@@ -249,4 +249,13 @@ GROUP BY personas.municipio;
 
 -- 16. Padres e hijos y sus coches
 -- 17. Parejas con algún hijo y sus coches
+SELECT padre, madre, COUNT(coches.matricula)
+FROM personas 
+JOIN cochesON coches.id_dueño IN (madre, padre)
+WHERE madre IS NOT NULL AND padre IS NOT NULL;
 -- 18. Personas de la misma familia con más de dos coches
+SELECT personas.id, madre 
+FROM personas 
+JOIN coches 
+ON coches.id_dueño IN (madre,padre,personas.id)
+WHERE padre IS NOT NULL AND madre IS NOT NULL;

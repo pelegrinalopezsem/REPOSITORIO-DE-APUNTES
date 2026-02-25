@@ -66,18 +66,36 @@ INSERT INTO jugadores (id_equipo, nombre, apellidos, fecha_nacimiento, nacionali
 -- EJERCICIOS DE JOIN
 
 -- 1. LEFT JOIN - Todos los equipos con sus jugadores (si existen)
-
+SELECT e.nombre, COUNT(j.nombre) AS total_jugadores
+FROM equipos e
+LEFT JOIN jugadores j
+ON e.id_equipo = j.id_equipo
+GROUP BY e.nombre;
 
 -- 2. RIGHT JOIN - Todos los jugadores con datos de su equipo
-
-
+SELECT *
+FROM jugadores j
+RIGHT JOIN equipos e
+ON e.id_equipo = j.id_equipo;
 
 -- 4. Salario promedio por equipo
-
+SELECT e.nombre, AVG(j.salario_anual) AS salario_medio
+FROM equipos e
+LEFT JOIN jugadores j
+ON e.id_equipo = j.id_equipo
+GROUP BY e.nombre;
 
 -- 5. Equipos sin jugadores registrados
-
+SELECT e.* FROM equipos e
+LEFT JOIN jugadores j ON e.id_equipo = j.id_equipo
+WHERE j.id_jugador IS NULL;
 -- 6. Jugadores por posición en cada equipo
-
-
+SELECT j.posicion , COUNT(j.nombre)
+FROM jugadores j
+GROUP BY j.posicion;
 -- 7. Comparativa de presupuestos vs gasto en jugadores
+SELECT e.nombre,e.presupuesto_anual, SUM(j.salario_anual) AS salario_total, (e.presupuesto_anual - SUM(j.salario_anual)) AS disponible
+FROM equipos e
+LEFT JOIN jugadores j
+ON e.id_equipo = j.id_equipo
+GROUP BY e.nombre;
