@@ -19,9 +19,8 @@ public class Amarre {
         setTipoAmarre(tipoAmarre);
     }
 
-    private asignarAmarre(){
+    private void asignarAmarre(int numero){
         numero = numeroAmarres;
-        
     }
 
     public int getNumero() {
