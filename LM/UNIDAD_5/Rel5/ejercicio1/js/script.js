@@ -1,3 +1,4 @@
+//AÑADIR UNA LISTA
 let lista = document.getElementById("lista")
 let contadorLista = lista.childElementCount
 function añadirNuevaLista() {
