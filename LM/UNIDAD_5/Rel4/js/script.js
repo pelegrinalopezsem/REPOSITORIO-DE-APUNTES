@@ -1,56 +1,57 @@
-//EJERCICIO 1
+//Ejercicio 1
 function mostrarAlerta() {
-    alert("¡Siente la energia del Burn!")
+    alert("¡Siente la Energía de Burn!")
 }
 
 
 const imagenAlerta = document.getElementById("imgClick")
 imagenAlerta.addEventListener("click", mostrarAlerta)
 
-//EJERCICIO 2
+//Ejercicio 2
 
-function cambiarImagen() {
-    let imagenACambiar = documen.getElementById("imgHover")
-    imagenACambiar.src = "https://picsum.photos/200?random=1" 
+function cambiarImagen(event) {
+    const imagenACambiar = event.target
+    imagenACambiar.dataset.original = imagen.src
+    imagenACambiar.src = "https://picsum.photos/id/238/200/300"
 }
 
-function restablecerImagen() {
-    imagen.scr = imagenOriginal
+function restablecerImagen(event) {
+    const imagenACambiar = event.target
+    imagenACambiar.src = imagen.dataset.original
 }
 
-let imagen = documen.getElementById("imgHover")
-const imagenOriginal = imagen.scr
+let imagen = document.getElementById("imgHover")
+const imagenOriginal = imagen.src
 
-imagen.addEventListener("mouseover",cambiarImagen)
-imagen.addEventListener("mouseover", restablecerImagen)
+imagen.addEventListener("mouseover", cambiarImagen)
+imagen.addEventListener("mouseout", restablecerImagen)
 
-//EJERCICIO 3
-
-const teclaPresionada = document.getElementById("campoTexto")
-teclaPresionada.addEventListener("keydown", function(event){
-    console.log("Tecla presionada: " + event.key)
+//Ejercicio 3
+const teclaPreseionada = document.getElementById("campoTexto")
+teclaPreseionada.addEventListener("keydown",function (event) {
+    console.log("Tecla presionada es: " + event.key);    
 })
 
-//EJERCICIO 4
+//Ejercicio 4
 const formulario = document.getElementById("formulario")
-const inputNombre = document.getElementById("nombre")
+const inputnombre = document.getElementById("nombre")
 const resultado = document.getElementById("resultado")
 
 formulario.addEventListener("submit", function (event) {
     event.preventDefault();
-    const nombre = inputNombre.ariaValue
-    //El innerHTML tiene en cuenta las lineas de codigo
-    resultado.innerHTML += "Energia Recargada " + nombre 
+    const nombre = inputnombre.value
+    resultado.innerHTML += "<br>Energia Recargada, <em>" + nombre + "</em>"
 })
-
-//EJERCICIO 5
+//Ejercicio 5
 const input = document.getElementById("codigo")
 const parrafo = document.getElementById("mensaje")
-input.addEventListener("focus", function () {
+input.addEventListener("focus", function() {
     this.style.border = "2px solid green"
     parrafo.textContent = "Introduce tu codigo de energia"
+    
 })
-input.addEventListener("blur", function () {
+input.addEventListener("blur", function() {
     this.style.border = ""
     parrafo.textContent = ""
+    
 })

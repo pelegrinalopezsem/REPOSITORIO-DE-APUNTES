@@ -1,14 +1,13 @@
 package PROGRAMACION.UNIDAD5.Rel3.ejercicio2;
 
-import java.util.Arrays;
 import java.util.ArrayList;
 
 public class Cliente {
     private int id;
     private String nombre;
     private String dni;
-    public String telefono;
-    public String email;
+    private String telefono;
+    private String email;
     private String direccion;
     ArrayList<String> dnis = new ArrayList<>();
 
@@ -47,7 +46,7 @@ public class Cliente {
 
     public void setDni(String dni) {
         dnis.add(dni);
-        if (!dnis.contains(dni) || !dni.isEmpty()) {
+        if (!dnis.contains(dni) && !dni.isEmpty()) {
             this.dni = dni;
         }
     }
@@ -57,7 +56,7 @@ public class Cliente {
     }
 
     public void setTelefono(String telefono) {
-        if (telefono.length() > 9) {
+        if (telefono.length() == 9) {
             this.telefono = telefono;
         }
     }

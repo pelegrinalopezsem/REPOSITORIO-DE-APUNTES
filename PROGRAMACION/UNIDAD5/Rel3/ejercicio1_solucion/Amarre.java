@@ -4,23 +4,29 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Amarre {
-    private final static ArrayList<String> TIPOVALIDOS = new ArrayList<>(
+
+    private static int numeroAmarres;
+    private final static ArrayList<String> TIPOSVALIDOS = new ArrayList<>(
             Arrays.asList("NORMAL", "PREMIUM", "MEGAYATE"));
+
     private int numero;
     private double longitudMaxima;
+    // Cambio de visibilidad a privado al tener restricciones
     private double precioDia;
     private boolean ocupado;
+    // Cambio de visibilidad a privado al tener restricciones
     private String tipoAmarre;
 
-    public Amarre(int numero, double longitudMaxima, double precioDia, boolean ocupado, String tipoAmarre) {
+    public Amarre(double longitudMaxima, String tipoAmarre) {
         asignarAmarre();
-        setLongitudMaxima(longitudMaxima);
-        this.ocupado = ocupado;
+        this.ocupado = false;
         setTipoAmarre(tipoAmarre);
+        setLongitudMaxima(longitudMaxima);
     }
 
-    private void asignarAmarre(int numero){
+    private void asignarAmarre() {
         numero = numeroAmarres;
+        numeroAmarres++;
     }
 
     public int getNumero() {
@@ -33,13 +39,13 @@ public class Amarre {
         }
     }
 
-    private void imprimirMensaje(String mensaje) {
-        System.err.println(mensaje);
+    private void imprimirMensajeError(String mensajeError) {
+        System.err.println(mensajeError);
     }
 
     public double getLongitudMaxima() {
         if (longitudMaxima == -1) {
-            imprimirMensaje("Longitud maxima con valor erroneo al ser menor de 4.0M.");
+            imprimirMensajeError("Longitud máxima con valor erroneo al ser menor de 4.0M. Solucionelo por favor");
         }
         return longitudMaxima;
     }
@@ -47,23 +53,32 @@ public class Amarre {
     public void setLongitudMaxima(double longitudMaxima) {
         if (longitudMaxima >= 4.0) {
             this.longitudMaxima = longitudMaxima;
+            calcularPrecioDia();
         } else {
+            // Añado valor por defecto si falla el setLongitudMaxima a -1
+            // para cumplir las restricciones ya que 0 no seria valor valido
             this.longitudMaxima = -1;
             precioDia = -1;
         }
     }
 
     public double getPrecioDia() {
+        if (precioDia == -1) {
+            imprimirMensajeError("Longitud máxima con valor erroneo al ser menor de 4.0M. Solucionelo por favor");
+        }
         return precioDia;
     }
 
-    public void calcularPrecioDia() {
-        if (tipoAmarre.equals(TIPOVALIDOS.get(0))) {
-            precioDia = 25 + (1.5 + longitudMaxima);
-        } else if (tipoAmarre.equals(TIPOVALIDOS.get(1))) {
-            precioDia = 60 + (2.2 * longitudMaxima);
-        } else {
-            precioDia = 120 + (3.5 * longitudMaxima);
+    private void calcularPrecioDia() {
+        if (tipoAmarre != null && longitudMaxima != 0.0) {
+
+            if (tipoAmarre.equals(TIPOSVALIDOS.get(0))) {
+                precioDia = 25 + (1.5 * longitudMaxima);
+            } else if (tipoAmarre.equals(TIPOSVALIDOS.get(1))) {
+                precioDia = 60 + (2.2 * longitudMaxima);
+            } else {
+                precioDia = 120 + (3.5 * longitudMaxima);
+            }
         }
     }
 
@@ -80,20 +95,20 @@ public class Amarre {
     }
 
     public void setTipoAmarre(String tipoAmarre) {
-        if (TIPOVALIDOS.contains(tipoAmarre.toUpperCase())) {
+        if (TIPOSVALIDOS.contains(tipoAmarre.toUpperCase())) {
             this.tipoAmarre = tipoAmarre;
             calcularPrecioDia();
         }
     }
 
     public String consultarDisponibilidad() {
-        return ocupado ? "Esta ocupado " : "Esta libre";
+        return ocupado ? "Etá ocupado" : "Está libre";
     }
 
     @Override
     public String toString() {
-        return "Amarre: " + numero + ",del tipo " + tipoAmarre + ", longitud maxima = "
-                + getLongitudMaxima() + "con precio" + getPrecioDia() + "€, disponibilidad= "
+        return "Amarre " + numero + " del tipo " + tipoAmarre + ". Longitud maxima de "
+                + getLongitudMaxima() + "m con precio diario de " + getPrecioDia() + "€/dia."
                 + consultarDisponibilidad();
     }
 
