@@ -11,16 +11,14 @@ public class Main {
         Faker faker = new Faker();
         Scanner sc = new Scanner(System.in);
 
-        //GENERAR 1000 animales
+        // GENERAR 1000 animales
         for (int i = 0; i < 1000; i++) {
             zoo.agregarAnimal(
-                new Animal(
-                    faker.nombreAnimal(),  
-                    String.valueOf(i),
-                    faker.numero(1, 10),
-                    faker.precio(100, 1000)
-                )
-            );
+                    new Animal(
+                            faker.nombreAnimal(),
+                            String.valueOf(i),
+                            faker.entero(1, 10),
+                            faker.precio(100, 1000)));
         }
 
         int opcion = -1;

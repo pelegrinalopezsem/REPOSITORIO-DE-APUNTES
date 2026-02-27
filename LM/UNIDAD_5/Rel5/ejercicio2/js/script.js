@@ -11,7 +11,9 @@ añadirProducto.addEventListener("click", function (event) {
     precioTotal += precioProducto;
     //PARA INTRODUCIR LOS DATOS DE LA LISTA DE LA COMPRA Y COMPROBAR QUE NO SE INTRODUCE VALORES VACIOS
     if(nombreProducto != "" && precioProducto != 0){
-        resultadoProductos.innerHTML += " " +nombreProducto + " : " + precioProducto + "€ |"
+        const li = document.createElement("li")
+        li.innerHTML += " " +nombreProducto + " : " + precioProducto + "€ |"
+        document.getElementById("listaProductos").appendChild()
         resultadoTotalPrecio.innerHTML = ""
         resultadoTotalPrecio.innerHTML += "Total: " + precioTotal + " €"
     } else {
