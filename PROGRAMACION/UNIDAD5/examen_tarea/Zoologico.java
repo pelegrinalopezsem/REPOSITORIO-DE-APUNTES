@@ -53,4 +53,40 @@ public class Zoologico {
     public ArrayList<Animal> obtenerTodos() {
         return animales;
     }
+
+    // AGREGAR EJEMPLARES
+    public boolean agregarEjemplares(String codigo, int cantidadAgregar) {
+
+        boolean actualizado = false;
+
+        for (Animal a : animales) {
+            if (a.getCodigo().equalsIgnoreCase(codigo)) {
+
+                int nuevaCantidad = a.getCantidad() + cantidadAgregar;
+                a.setCantidad(nuevaCantidad);
+
+                actualizado = true;
+            }
+        }
+
+        return actualizado;
+    }
+
+public boolean retirarEjemplares(String codigo, int cantidadRetirar) {
+    boolean actualizado = false;
+    for (Animal a : animales) {
+        if (a.getCodigo().equalsIgnoreCase(codigo)) {
+            if (cantidadRetirar > 0) {
+                if (cantidadRetirar <= a.getCantidad()) {
+
+                    int nuevaCantidad = a.getCantidad() - cantidadRetirar;
+                    a.setCantidad(nuevaCantidad);
+                    actualizado = true;
+                }
+            }
+        }
+    }
+
+    return actualizado;
+}
 }

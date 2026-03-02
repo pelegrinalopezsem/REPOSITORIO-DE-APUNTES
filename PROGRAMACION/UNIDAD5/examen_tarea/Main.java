@@ -23,19 +23,29 @@ public class Main {
 
         int opcion = -1;
 
-        while (opcion != 0) {
+        while (opcion != 6) {
 
-            System.out.println("\n1.Buscar por código");
-            System.out.println("2.Buscar por nombre");
-            System.out.println("3.Eliminar por código");
-            System.out.println("4.Mostrar todos");
-            System.out.println("0.Salir");
-            System.out.print("Opción: ");
+            System.out.println("===== GESTIÓN DE ZOOLÓGICO =====\n" +
+                    "1. Mostrar todos los animales\n" +
+                    "2. Buscar un animal por código\n" +
+                    "3. Agregar ejemplares a un animal\n" +
+                    "4. Retirar ejemplares de un animal\n" +
+                    "5. Eliminar un animal\n" +
+                    "6. Salir\n" +
+                    "Seleccione una opción: ");
 
             opcion = sc.nextInt();
             sc.nextLine();
-
+//MOSTRAR ANIMALES
             if (opcion == 1) {
+
+                ArrayList<Animal> lista = zoo.obtenerTodos();
+
+                for (Animal a : lista) {
+                    System.out.println(a);
+                }
+            //BUSCAR POR CODIGO
+            } else if (opcion == 2) {
 
                 System.out.print("Código: ");
                 String codigo = sc.nextLine();
@@ -48,24 +58,40 @@ public class Main {
                     System.out.println("No encontrado");
                 }
             }
-
-            else if (opcion == 2) {
-
-                System.out.print("Nombre: ");
-                String nombre = sc.nextLine();
-
-                ArrayList<Animal> lista = zoo.buscarPorNombre(nombre);
-
-                for (Animal a : lista) {
-                    System.out.println(a);
-                }
-            }
-
+            //SUMAR CANTIDAD ANIMAL
             else if (opcion == 3) {
 
                 System.out.print("Código: ");
                 String codigo = sc.nextLine();
 
+                System.out.print("Cantidad a agregar: ");
+                int cantidad = sc.nextInt();
+                sc.nextLine();
+
+                if (zoo.agregarEjemplares(codigo, cantidad)) {
+                    System.out.println("Cantidad actualizada");
+                } else {
+                    System.out.println("Animal no encontrado");
+                }
+            //RESTAR CANTIDAD ANIMAL
+            } else if (opcion == 4) {
+
+                System.out.print("Código: ");
+                String codigo = sc.nextLine();
+
+                System.out.print("Cantidad a restar: ");
+                int cantidad = sc.nextInt();
+                sc.nextLine();
+
+                if (zoo.retirarEjemplares(codigo, cantidad)) {
+                    System.out.println("Cantidad actualizada");
+                } else {
+                    System.out.println("Animal no encontrado");
+                }
+                //OPCION ELIMINAR ANIMAL
+            } else if (opcion == 5) {
+                System.out.print("Código: ");
+                String codigo = sc.nextLine();
                 if (zoo.eliminarAnimal(codigo)) {
                     System.out.println("Eliminado");
                 } else {
@@ -73,16 +99,7 @@ public class Main {
                 }
             }
 
-            else if (opcion == 4) {
-
-                ArrayList<Animal> lista = zoo.obtenerTodos();
-
-                for (Animal a : lista) {
-                    System.out.println(a);
-                }
-            }
         }
-
         sc.close();
     }
 }
