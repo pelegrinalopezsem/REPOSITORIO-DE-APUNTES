@@ -11,8 +11,7 @@ public class Main {
         Faker faker = new Faker();
         Scanner sc = new Scanner(System.in);
 
-        // GENERAR 1000 animales
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100; i++) {
             zoo.agregarAnimal(
                     new Animal(
                             faker.nombreAnimal(),
