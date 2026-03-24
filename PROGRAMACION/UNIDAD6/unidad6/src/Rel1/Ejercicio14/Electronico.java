@@ -1,4 +1,4 @@
-package src.Rel1.Ejercicio14;
+
 
 public class Electronico extends Producto{
     private int garantia;
@@ -7,9 +7,17 @@ public class Electronico extends Producto{
         super(nombre, precio);
         this.garantia = garantia;
     }
+    public int getGarantia() {
+        return garantia;
+    }
+
+    public void setGarantia(int garantia) {
+        this.garantia = garantia;
+    }
     
     @Override
     public String toString(){
-        return "El producto: " + nombre + " tiene un precio de " + precio + "€ y una garantia de " + garantia;
+        return "El producto: " + getNombre() + " tiene un precio de " + getPrecio() + "€ y una garantia de " + getGarantia();
     }
+
 }

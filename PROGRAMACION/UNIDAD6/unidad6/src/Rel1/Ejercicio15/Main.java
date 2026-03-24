@@ -9,8 +9,8 @@ public class Main {
         Gerente santi = new Gerente(18000.0, "Santiago Abascal", 40000.0);
         Asistente olola = new Asistente(800, "Macarena Olona", 60000);
 
-        System.out.println(santi);
-        System.out.println(olola);
+        System.out.println(santi.calcularSueldo());
+        System.out.println(olola.calcularSueldo());
 
     }
 }

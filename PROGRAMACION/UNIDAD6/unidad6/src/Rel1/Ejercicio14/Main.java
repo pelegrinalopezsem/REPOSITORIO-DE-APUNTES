@@ -1,4 +1,3 @@
-package src.Rel1.Ejercicio14;
 
 // ### 14. Productos en una Tienda Online
 // **Enunciado:**  
